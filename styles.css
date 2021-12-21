@@ -16,14 +16,14 @@ body {
 
 .header {
     color: rgb(191, 191, 191);
-    font-family: 'printveticaregular';
+    font-family: 'printveticaregular', Helvetica, Arial;
     font-style: bold;
     font-size: 16px;
 }
 
 a {
     color: rgb(65, 105, 225);
-    font-family: 'printveticaregular';
+    font-family: 'printveticaregular', Helvetica, Arial;
     font-size: 16px;
 }
 
@@ -34,5 +34,5 @@ p {
 
 img {
     height: auto;
-    width: 500px;
+    width: 600px;
 }
