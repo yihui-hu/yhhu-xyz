@@ -2,20 +2,28 @@
     margin: 18px;
 }
 
+@font-face {
+    font-family: 'printveticaregular';
+    src: url('https://yihui-hu.github.io/fonts/printvetica-webfont.woff2') format('woff2'),
+         url('https://yihui-hu.github.io/fonts/printvetica-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
   width: 600px;
 }
 
 .header {
     color: rgb(191, 191, 191);
-    font-family: sans-serif;
+    font-family: 'printveticaregular';
     font-style: bold;
     font-size: 16px;
 }
 
 a {
     color: rgb(65, 105, 225);
-    font-family: sans-serif;
+    font-family: 'printveticaregular';
     font-size: 16px;
 }
 
