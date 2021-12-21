@@ -16,14 +16,14 @@ body {
 
 .header {
     color: rgb(191, 191, 191);
-    font-family: 'printveticaregular', Helvetica, Arial;
+    font-family: 'printveticaregular';
     font-style: bold;
     font-size: 16px;
 }
 
 a {
     color: rgb(65, 105, 225);
-    font-family: 'printveticaregular', Helvetica, Arial;
+    font-family: 'printveticaregular';
     font-size: 16px;
 }
 
