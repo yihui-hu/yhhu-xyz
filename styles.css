@@ -19,30 +19,20 @@ body {
     font-family: 'printveticaregular', Helvetica, Arial;
     font-style: bold;
     font-size: 16px;
-    /* padding-left: 18px;
-    padding-top: 18px; */
 }
 
 a {
     color: rgb(65, 105, 225);
     font-family: 'printveticaregular', Helvetica, Arial;
     font-size: 16px;
-    /* padding: 18px; */
-}
-
-a:last-of-type {
-    margin-bottom: 0;
 }
 
 p {
     color: black;
     font-size: 20px;
-    /* padding-left: 18px;
-    padding-top: 8px; */
 }
 
 img {
     height: auto;
-    max-width: 100%;
-    /* padding: 18px; */
+    width: 500px;
 }
