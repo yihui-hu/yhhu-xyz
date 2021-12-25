@@ -1,5 +1,5 @@
 * {
-    margin: 18px;
+    box-sizing: border-box;
 }
 
 @font-face {
@@ -11,7 +11,16 @@
 }
 
 body {
-  width: 600px;
+  line-height: 1.3;
+}
+
+.container {
+    max-width: 600px;
+    padding: 3vw;
+}
+
+.about {
+    /* margin-bottom: 3em; */
 }
 
 .header {
@@ -21,18 +30,19 @@ body {
     font-size: 16px;
 }
 
-a {
-    color: rgb(65, 105, 225);
-    font-family: 'printveticaregular', Helvetica, Arial;
-    font-size: 16px;
-}
-
 p {
     color: black;
     font-size: 20px;
 }
 
+a {
+    color: rgb(65, 105, 225);
+    font-family: 'printveticaregular', Helvetica, Arial;
+    font-size: 16px;
+    margin-right: 2em;
+}
+
 img {
     height: auto;
-    width: 500px;
+    max-width: 100%;
 }
