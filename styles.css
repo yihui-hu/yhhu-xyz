@@ -1,6 +1,13 @@
-* {
-    box-sizing: border-box;
+html {
+    max-width: 65ch;
+    margin: auto;
+    line-height: 1.75;
+    font-size: 1.25em;
 }
+  
+/* * {
+    box-sizing: border-box;
+} */
 
 @font-face {
     font-family: 'printveticaregular';
@@ -32,18 +39,44 @@ body {
 
 p {
     color: black;
+    font-family: 'Signifier-Regular', 'Times New Roman', Times, serif;
     font-size: 18px;
 }
 
-a {
-    color: rgb(65, 105, 225);
+a.main {
+    color: rgb(39, 86, 224);
     font-family: 'printveticaregular', Helvetica, Arial;
     font-size: 16px;
     margin-right: 2em;
     text-decoration: none
 }
 
-img {
+a.inline {
+    font-family: Helvetica, Arial;
+    font-size: 16px;
+}
+
+img.grayscale {
     height: auto;
     max-width: 100%;
+    filter: grayscale(100%);
+}
+
+img.normal {
+    height: auto;
+    max-width: 100%;
+}
+
+code,
+pre {
+  background: #eee;
+}
+
+code {
+  padding: 2px 4px;
+  vertical-align: text-bottom;
+}
+
+pre {
+  padding: 1em;
 }
