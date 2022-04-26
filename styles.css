@@ -4,6 +4,7 @@ html {
     max-width: 65ch;
     /* margin: auto; */
     line-height: 1.75;
+    padding: 2vw;
     font-size: 1.25em;
 }
   
@@ -34,7 +35,6 @@ body {
 
 .container {
     max-width: 600px;
-    padding: 3vw;
 }
 
 .header {
@@ -47,7 +47,7 @@ body {
 p {
     color: black;
     font-family: 'Signifier-Regular', 'Times New Roman', Times, serif;
-    font-size: 17px;
+    font-size: 18px;
 }
 
 a.main {
@@ -60,7 +60,7 @@ a.main {
 
 a.inline {
     font-family: 'Signifier-Regular', 'Times New Roman', Times, serif;
-    font-size: 17px;
+    font-size: 18px;
     text-decoration: none
 }
 
@@ -113,7 +113,7 @@ table{
     padding:0.35em 0.75em;
     vertical-align:top;
     font-family: 'Signifier-Regular', 'Times New Roman', Times, serif;
-    font-size: 17px;
+    font-size:0.9em;
     border:1px solid #e6e6e6;
     border-top:0;
     border-left:0;
