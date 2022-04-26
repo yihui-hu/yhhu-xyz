@@ -18,7 +18,7 @@
                 (i.e. words) within said directory.
             </p>
 
-            <p>Hash tables are a data structure that allows for fast lookup of data, and the one that
+            <p>Hash tables are data structures that allow for fast lookup of data, and the one that
                 my partner and I chose to implement in our project utilises a simple array and the built-in
                 C++ hash function. The hash function takes in a string and returns an integer, which represents
                 that word's index in the array. So when a user goes to search for that same string, it returns the
@@ -34,7 +34,7 @@
 
             <p>But what if there are collisions (i.e. two unique words, when passed into the hash function, return
                 the same index)? Turns out we can handle those using one of two approaches: chaining, or linear probing.
-                Chaining simply entails storing the two words in the same index using a linked list, while linear
+                Chaining simply entails storing the two words in the same index using an array/linked list, while linear
                 probing entails searching for the next available/empty spot in the array. 
             </p>
 
