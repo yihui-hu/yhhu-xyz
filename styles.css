@@ -1,20 +1,31 @@
+/* html styling from swyx's 100 bytes of css  */
+
 html {
     max-width: 65ch;
-    margin: auto;
+    /* margin: auto; */
     line-height: 1.75;
     font-size: 1.25em;
 }
   
-/* * {
-    box-sizing: border-box;
-} */
-
 @font-face {
     font-family: 'printveticaregular';
     src: url('https://yihui-hu.github.io/fonts/printvetica-webfont.woff2') format('woff2'),
          url('https://yihui-hu.github.io/fonts/printvetica-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Signifier-Regular';
+    src:url('https://yihui-hu.github.io/fonts/Signifier-Regular.woff') format('woff'),
+        url('https://yihui-hu.github.io/fonts/Signifier-Regular.woff2') format('woff2'),
+        url('https://yihui-hu.github.io/fonts/Signifier-Regular.eot'),
+        url('https://yihui-hu.github.io/fonts/Signifier-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://yihui-hu.github.io/fonts/Signifier-Regular.otf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 body {
@@ -24,10 +35,6 @@ body {
 .container {
     max-width: 600px;
     padding: 3vw;
-}
-
-.about {
-    /* margin-bottom: 3em; */
 }
 
 .header {
@@ -52,14 +59,15 @@ a.main {
 }
 
 a.inline {
-    font-family: Helvetica, Arial;
-    font-size: 16px;
+    font-family: 'Signifier-Regular', 'Times New Roman', Times, serif;
+    font-size: 18px;
+    text-decoration: none
 }
 
 img.grayscale {
     height: auto;
     max-width: 100%;
-    filter: grayscale(100%);
+    filter: grayscale(100%) brightness(120%);
 }
 
 img.normal {
@@ -67,8 +75,9 @@ img.normal {
     max-width: 100%;
 }
 
-code,
-pre {
+/* code background from https://jgthms.com/web-design-in-4-minutes */
+
+code, pre {
   background: #eee;
 }
 
@@ -80,3 +89,56 @@ code {
 pre {
   padding: 1em;
 }
+
+/* tables from awsm.css */
+
+table{
+    display:inline-block;
+    border-spacing:0;
+    border-collapse:collapse;
+    overflow-x:auto;
+    max-width:100%;
+    text-align:left;
+    vertical-align:top;
+    background:linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%) 0 0, linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%) 100% 0;
+    background-attachment:scroll, scroll;
+    background-size: 1px 100%, 1px 100%;
+    background-repeat:no-repeat, no-repeat;
+  }
+  table caption{
+    font-size:0.9em;
+    background:white;
+  }
+  table td, table th{
+    padding:0.35em 0.75em;
+    vertical-align:top;
+    font-family: 'Signifier-Regular', 'Times New Roman', Times, serif;
+    font-size:0.9em;
+    border:1px solid #e6e6e6;
+    border-top:0;
+    border-left:0;
+  }
+  table td:first-child, table th:first-child{
+    padding-left:0;
+    background-image:linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%);
+    background-size:2px 100%;
+    background-repeat:no-repeat;
+  }
+  table td:last-child, table th:last-child{
+    padding-right:0;
+    border-right:0;
+    background-image:linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
+    background-position:100% 0;
+    background-size:2px 100%;
+    background-repeat:no-repeat;
+  }
+  table td:only-child, table th:only-child{
+    background-image:linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%), linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
+    background-position:0 0, 100% 0;
+    background-size:2px 100%, 2px 100%;
+    background-repeat:no-repeat, no-repeat;
+  }
+  table th{
+    line-height:1.2;
+  }
+    
