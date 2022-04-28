@@ -97,6 +97,8 @@ figcaption {
   overflow:auto;
 }
 
+.gist .blob-code-inner{ font-size:14px !important; }
+
 /* github gist styling from https://codersblock.com/blog/customizing-github-gists/ */
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono');
 
@@ -117,7 +119,6 @@ body .gist .blob-wrapper {
 body .gist .highlight {
   background-color: transparent;
   font-family: 'Droid Sans Mono', monospace;
-  font-size: 14px;
 }
 
 body .gist .highlight td {
