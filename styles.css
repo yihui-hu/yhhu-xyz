@@ -88,6 +88,63 @@ figcaption {
   text-align: center;
 }
 
+/* tables from awsm.css */
+table {
+  display:inline-block;
+  border-spacing:0;
+  border-collapse:collapse;
+  overflow-x:auto;
+  max-width:100%;
+  text-align:left;
+  vertical-align:top;
+  background:linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%) 0 0, linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%) 100% 0;
+  background-attachment:scroll, scroll;
+  background-size: 1px 100%, 1px 100%;
+  background-repeat:no-repeat, no-repeat;
+}
+  
+table caption {
+    font-size:0.9em;
+    background:white;
+}
+
+table td, table th {
+    padding:0.35em 0.75em;
+    vertical-align:top;
+    font-family: 'Signifier-Regular', 'Times New Roman', Times, serif;
+    font-size: 17px;
+    border:1px solid #e6e6e6;
+    border-top:0;
+    border-left:0;
+}
+  
+table td:first-child, table th:first-child {
+    padding-left:0;
+    background-image:linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%);
+    background-size:2px 100%;
+    background-repeat:no-repeat;
+}
+  
+table td:last-child, table th:last-child {
+    padding-right:0;
+    border-right:0;
+    background-image:linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
+    background-position:100% 0;
+    background-size:2px 100%;
+    background-repeat:no-repeat;
+}
+
+table td:only-child, table th:only-child {
+    background-image:linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%), linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
+    background-position:0 0, 100% 0;
+    background-size:2px 100%, 2px 100%;
+    background-repeat:no-repeat, no-repeat;
+}
+
+table th {
+    line-height:1.2;
+}
+
 .gist {
   overflow:auto;
 }
@@ -139,55 +196,3 @@ body .gist tr:last-child td {
 body .gist .gist-meta {
   display: none;
 }
-
-/* tables from awsm.css */
-table{
-    display:inline-block;
-    border-spacing:0;
-    border-collapse:collapse;
-    overflow-x:auto;
-    max-width:100%;
-    text-align:left;
-    vertical-align:top;
-    background:linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%) 0 0, linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%) 100% 0;
-    background-attachment:scroll, scroll;
-    background-size: 1px 100%, 1px 100%;
-    background-repeat:no-repeat, no-repeat;
-  }
-  table caption{
-    font-size:0.9em;
-    background:white;
-  }
-  table td, table th{
-    padding:0.35em 0.75em;
-    vertical-align:top;
-    font-family: 'Signifier-Regular', 'Times New Roman', Times, serif;
-    font-size: 17px;
-    border:1px solid #e6e6e6;
-    border-top:0;
-    border-left:0;
-  }
-  table td:first-child, table th:first-child{
-    padding-left:0;
-    background-image:linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%);
-    background-size:2px 100%;
-    background-repeat:no-repeat;
-  }
-  table td:last-child, table th:last-child{
-    padding-right:0;
-    border-right:0;
-    background-image:linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
-    background-position:100% 0;
-    background-size:2px 100%;
-    background-repeat:no-repeat;
-  }
-  table td:only-child, table th:only-child{
-    background-image:linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%), linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
-    background-position:0 0, 100% 0;
-    background-size:2px 100%, 2px 100%;
-    background-repeat:no-repeat, no-repeat;
-  }
-  table th{
-    line-height:1.2;
-  }
-    
