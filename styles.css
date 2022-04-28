@@ -1,12 +1,20 @@
 /* html styling from swyx's 100 bytes of css  */
 
-html {
+html.main {
     max-width: 65ch;
-    /* margin: auto; */
     line-height: 1.75;
     padding: 3vw;
     max-width: 600px;
     font-size: 1.25em;
+}
+
+html.normal {
+  max-width: 65ch;
+  margin: auto;
+  line-height: 1.75;
+  padding: 3vw;
+  max-width: 600px;
+  font-size: 1.25em;
 }
   
 @font-face {
@@ -65,11 +73,20 @@ img.grayscale {
     height: auto;
     max-width: 100%;
     filter: grayscale(100%) brightness(120%);
+    border-radius: 9px;
 }
 
 img.normal {
     height: auto;
     max-width: 100%;
+    border-radius: 9px;
+}
+
+figcaption {
+  color: rgb(152, 152, 152);
+  font-family: Helvetica, Arial;
+  font-size: 16px;
+  text-align: center;
 }
 
 /* code background from https://jgthms.com/web-design-in-4-minutes */
