@@ -97,6 +97,48 @@ figcaption {
   overflow:auto;
 }
 
+/* github gist styling from https://codersblock.com/blog/customizing-github-gists/ */
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono');
+
+body .gist .gist-file {
+  border-radius: 7px;
+}
+
+body .gist .gist-data {
+  border-bottom: none;
+  border-radius: 7px;
+  background-color: hsl(0, 0%, 98%);
+}
+
+body .gist .blob-wrapper {
+  border-radius: 7px;
+}
+
+body .gist .highlight {
+  background-color: transparent;
+  font-family: 'Droid Sans Mono', monospace;
+  font-size: 14px;
+}
+
+body .gist .highlight td {
+  padding: 5px 15px !important;
+  line-height: 1;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+body .gist tr:first-child td {
+  padding-top: 10px !important;
+}
+
+body .gist tr:last-child td {
+  padding-bottom: 10px !important;
+}
+
+body .gist .gist-meta {
+  display: none;
+}
+
 /* tables from awsm.css */
 table{
     display:inline-block;
