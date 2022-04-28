@@ -24,8 +24,8 @@
                 that word's index in the array. So when a user goes to search for that same string, it returns the
                 same index; when we access that index in the hash table, we get back the same word.
             </p>
-
-            <img class="normal" src="../../images/hashtable_sample.png" alt="hash table sample code">
+            
+            <script src="https://gist.github.com/yihui-hu/2442d100835341d06fe97b736832d47c.js"></script>
 
             <p>To make it work more like grep, we store not only the string but also other useful information
                 in the hash table (using a struct), like its file name, line number, and the line itself. So

@@ -1,5 +1,4 @@
 /* html styling from swyx's 100 bytes of css  */
-
 html.main {
     max-width: 65ch;
     line-height: 1.75;
@@ -89,23 +88,16 @@ figcaption {
   text-align: center;
 }
 
-/* code background from https://jgthms.com/web-design-in-4-minutes */
-
-code, pre {
-  background: #eee;
+.gist {
+  overflow:auto;
 }
 
-code {
-  padding: 2px 4px;
-  vertical-align: text-bottom;
-}
-
-pre {
-  padding: 1em;
+.gist .blob-wrapper.data {
+  max-height: 300px;
+  overflow:auto;
 }
 
 /* tables from awsm.css */
-
 table{
     display:inline-block;
     border-spacing:0;
