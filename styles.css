@@ -24,21 +24,12 @@ html.normal {
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Signifier-Regular';
-    src:url('https://yihui-hu.github.io/fonts/Signifier-Regular.woff') format('woff'),
-        url('https://yihui-hu.github.io/fonts/Signifier-Regular.woff2') format('woff2'),
-        url('https://yihui-hu.github.io/fonts/Signifier-Regular.eot'),
-        url('https://yihui-hu.github.io/fonts/Signifier-Regular.eot?#iefix') format('embedded-opentype'),
-        url('https://yihui-hu.github.io/fonts/Signifier-Regular.otf') format('truetype');
-
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+body.main{
+  line-height: 1.3;
 }
 
-body {
-  line-height: 1.3;
+body.copy{
+  line-height: 1.5;
 }
 
 .header {
@@ -50,7 +41,7 @@ body {
 
 p {
     color: black;
-    font-family: 'Signifier-Regular', 'Times New Roman', Times, serif;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
     font-size: 17px;
 }
 
@@ -63,22 +54,28 @@ a.main {
 }
 
 a.inline {
-    font-family: 'Signifier-Regular', 'Times New Roman', Times, serif;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
     font-size: 17px;
     text-decoration: none
+}
+
+a.telescoping {
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 40px;
+  text-decoration: none
 }
 
 img.grayscale {
     height: auto;
     max-width: 100%;
     filter: grayscale(100%) brightness(120%);
-    border-radius: 7px;
+    border-radius: 6px;
 }
 
 img.normal {
     height: auto;
     max-width: 100%;
-    border-radius: 7px;
+    border-radius: 6px;
 }
 
 figcaption {
@@ -111,7 +108,7 @@ table caption {
 table td, table th {
     padding:0.35em 0.75em;
     vertical-align:top;
-    font-family: 'Signifier-Regular', 'Times New Roman', Times, serif;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
     font-size: 17px;
     border:1px solid #e6e6e6;
     border-top:0;
