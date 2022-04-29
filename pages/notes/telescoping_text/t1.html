@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html class="normal" lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>you</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="../../../styles.css">
+        <script src="https://unpkg.com/telescopic-text/lib/index.js"></script>
+        <link href="https://unpkg.com/telescopic-text/lib/index.css" rel="stylesheet">
+    </head>
+    <body class="copy">
+        <div class="container">
+
+            <div id="telescopicPoem"></div>
+            <script>
+            const telescopicContent = createTelescopicTextFromBulletedList(`
+             - I have all of
+             - you,
+              - you, are all I have.
+               `, {separator: ' ', textMode: 'text'});
+            const container = document.getElementById("telescopicPoem");
+            container.appendChild(telescopicContent);
+            </script>
+
+            <p></p>
+            <a class = "main" href = "../../notes/290422_telescopingtext.html">⚯&#xFE0E; return to telescoping notes</a>
+        </div>
+    </body>
+</html>
