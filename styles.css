@@ -77,13 +77,13 @@ img.grayscale {
     height: auto;
     max-width: 100%;
     filter: grayscale(100%) brightness(120%);
-    border-radius: 6px;
+    border-radius: 4px;
 }
 
 img.normal {
     height: auto;
     max-width: 100%;
-    border-radius: 6px;
+    border-radius: 4px;
 }
 
 figcaption {
