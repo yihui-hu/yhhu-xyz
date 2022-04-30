@@ -26,7 +26,7 @@ html.normal {
 }
 
 body.main{
-  line-height: 1.3;
+  line-height: 1.2;
 }
 
 body.copy{
@@ -38,6 +38,13 @@ body.copy{
     font-family: 'printveticaregular', Helvetica, Arial;
     font-style: bold;
     font-size: 16px;
+}
+
+.rightalign {
+  color: black;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 17px;
+  text-align: right;
 }
 
 p {
