@@ -30,7 +30,7 @@ body.main{
 }
 
 body.copy{
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .header {
@@ -40,11 +40,11 @@ body.copy{
     font-size: 16px;
 }
 
-.rightalign {
+.rightspacer {
   color: black;
   font-family: 'Georgia', 'Times New Roman', Times, serif;
   font-size: 17px;
-  text-align: right;
+  margin-left: 6em;
 }
 
 p {
