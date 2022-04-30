@@ -19,8 +19,8 @@ html.normal {
   
 @font-face {
     font-family: 'printveticaregular';
-    src: url('https://yihui-hu.github.io/fonts/printvetica-webfont.woff2') format('woff2'),
-         url('https://yihui-hu.github.io/fonts/printvetica-webfont.woff') format('woff');
+    src: url('https://yhhu.xyz/fonts/printvetica-webfont.woff2') format('woff2'),
+         url('https://yhhu.xyz/fonts/printvetica-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
