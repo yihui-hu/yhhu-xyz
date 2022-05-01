@@ -67,7 +67,7 @@ a.main {
     text-decoration: none
 }
 
-a.inline {
+a.inline, li {
     font-family: 'Georgia', 'Times New Roman', Times, serif;
     font-size: 17px;
     text-decoration: none
