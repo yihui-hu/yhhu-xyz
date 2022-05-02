@@ -74,6 +74,13 @@ a.main {
     text-decoration: none
 }
 
+a.footnote {
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 15px;
+  margin-left: 2px;
+  text-decoration: none
+}
+
 a.inline, li {
     font-family: 'Georgia', 'Times New Roman', Times, serif;
     font-size: 17px;
