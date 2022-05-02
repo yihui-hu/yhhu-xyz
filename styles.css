@@ -87,16 +87,31 @@ a.telescoping {
 }
 
 img.grayscale {
-    height: auto;
-    max-width: 100%;
-    filter: grayscale(100%) brightness(120%);
-    border-radius: 4px;
+  height: auto;
+  max-width: 100%;
+  filter: grayscale(100%) brightness(120%);
+  border-radius: 4px;
+}
+
+img.index {
+  height: auto;
+  max-width: 100%;
+  border-radius: 4px;
 }
 
 img.normal {
-    height: auto;
-    max-width: 100%;
-    border-radius: 4px;
+  height: auto;
+  max-width: 100%;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+img.border {
+  height: auto;
+  max-width: 100%;
+  border-radius: 4px;
+  border: 1px solid rgb(237, 237, 237);
+  margin-top: 10px;
 }
 
 figcaption {
