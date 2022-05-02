@@ -53,6 +53,13 @@ body.copy{
   font-size: 16px;
 }
 
+.italic {
+  color: black;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 17px;
+  font-style: italic;
+}
+
 p {
     color: black;
     font-family: 'Georgia', 'Times New Roman', Times, serif;
