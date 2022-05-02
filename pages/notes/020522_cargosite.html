@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="normal" lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>rough thoughts on cargo vs github pages </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="../../styles.css">
+    </head>
+    <body class="copy" id="article">
+        <div class="container">
+            <div class="header">
+                rough thoughts on cargo vs github pages 
+            </div>
+            <p class="readtime"><span id="time"></span></p>
+
+            <p>
+            Previously, I had a website on cargo.site ⤵&#xFE0E; 
+            </p>
+
+            <p>
+            <img class="normal" src="../../images/cargositeindex.png" alt="cargo site main page">
+            </p>
+
+            <p>
+            I paid $99/yr for two years, on top of $13/yr for a custom domain. It seems the price has gone up since (now $14/mth billed yearly = $168)<sup><a class="inline" href="#footnote-1">1</a></sup>.
+            </p>
+
+            <p>
+            Setting up this website using Github Pages is free, and the custom domain (I use namecheap; .xyz domains are some of the cheapest out there) only costs ~$6/year. So that's 6% of what I used to pay, and 3% of what it would cost now. 
+            </p>
+
+            <p>
+            I will say that cargo is excellent for showcasing portfolios, which was my main purpose 3 years back. I didn't have much (if any at all) programming knowledge, and cargo is super easy to set up and use for non-programmers, especially those who are visually inclined. It is to coding HTML & CSS in VS Code what Microsoft Word is to LaTeX (i.e. WYSIWYG). 
+            </p>
+
+            <p>
+            <img class="normal" src="../../images/cargosite.gif" alt="cargo site portfolio">
+            </p>
+
+            <p>
+            The complimentary font selection on cargo is great (they just added new fonts from the Dinamo foundry) and the ability to tap on images for a zoomed in view is handy (I'm pretty sure there's a way to do that on here as well but I haven't looked into it yet). The wireframe and reference templates are clean. There are nice transitional animations, cool image/gif filters, custom gallery layouts for images that can also be movable... 
+            </p>
+
+            <p>
+            But optimising for mobile/tablet screens with cargo is a lot more difficult that it appears. I remember spending much time fiddling around with different viewports, making sure everything looked OK on various screen sizes. 
+            </p>
+
+            <p>
+            With HTML & CSS all it required was this snippet of code for the layout I had in mind: 
+            </p>
+
+            <p>
+            <img class="normal" src="../../images/deviceviewport.png" alt="code snippet for device viewport">
+            </p>
+
+            <p>
+            And right now, for me, tinkering around with raw HTML & CSS (and some javascript) is a lot more fun. Getting the layout exactly how I want is also somehow easier than using the "blocks" that cargo has, but much of the complex layout that cargo affords is gone, which is a little sad but I don't need anything too fancy for right now. And the entire website can be stored on a folder or hard drive that takes up less than 90mb (currently); I don't have to worry about migrating to other platforms, or depend on cargo.site to run indefinitely. I do want to clean up the files someday though, and optimise my website to use less space and run even faster (might want to borrow some ideas from <a class="inline" target="_blank" href="https://solar.lowtechmagazine.com/about.html">https://solar.lowtechmagazine.com/about</a>).
+            </p>
+
+            <hr style="margin-top: 2em;margin-bottom: 1em;">
+
+            <p id="footnote-1">
+            1. But what's nice is that non-profit organisations and students at one of their select institutions (e.g. RISD, ArtCenter College of Design) will have access to cargo for free, or you could get a faculty member to apply for membership to the program. 
+            </p>
+
+            <p></p>
+            <a class = "main" href = "../notes.html">⚛&#xFE0E; return to notes</a>
+            <a class = "main" href = "../../index.html">⁖ return to main</a>
+        </div>
+        <script src="../../js/readTimeEstimate.js"></script>
+    </body>
+</html>
