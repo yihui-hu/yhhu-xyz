@@ -8,132 +8,87 @@
     </head>
     <body class="copy">
         <div class="container">
+            <div id="buttonContainer">
+                <button class="btn active" onclick="filterSelection('all')"> all notes</button>
+                <button class="btn" onclick="filterSelection('cs')"> comp sci</button>
+                <button class="btn" onclick="filterSelection('art')"> art / design</button>
+                <button class="btn" onclick="filterSelection('stories')"> stories</button>
+                <button class="btn" onclick="filterSelection('thoughts')"> thoughts</button>
+            </div>
+
             <!-- 2022 -->
 
-            <div class="header">
+            <div class="filterDiv thoughts art cs header">
+                <br>
                 2022
             </div>
-            <p></p>
-            <table>
-                <tr>
-                    <td>02/05</td>
-                    <td><a class="inline" href="../pages/notes/020522_cargosite.html">cargo vs. github pages </a></td>
-                </tr>
+            <div>
+                <p class="filterDiv thoughts art" style="margin-left: 3em">02/05<a style="margin-left: 3em" class="inline" href="../pages/notes/020522_cargosite.html">cargo vs. github pages</a></p>
 
-                <tr>
-                    <td>30/04</td>
-                    <td><a class="inline" href="../pages/notes/300422_readtimeestimate.html">read time estimate</a></td>
-                </tr>
+                <p class="filterDiv cs" style="margin-left: 3em">30/04<a style="margin-left: 3em" class="inline" href="../pages/notes/300422_readtimeestimate.html">read time estimate</a></p>
 
-                <tr>
-                    <td>29/04</td>
-                    <td><a class="inline" href="../pages/notes/290422_telescopingtext.html">telescoping notes</a></td>
-                </tr>
+                <p class="filterDiv thoughts" style="margin-left: 3em">29/04<a style="margin-left: 3em" class="inline" href="../pages/notes/290422_telescopingtext.html">telescoping notes</a></p>
 
-                <tr>
-                    <td>28/04</td>
-                    <td><a class="inline" href="../pages/notes/280422_famicase.html">famicase 2022</a></td>
-                </tr>
+                <p class="filterDiv art" style="margin-left: 3em">28/04<a style="margin-left: 3em" class="inline" href="../pages/notes/280422_famicase.html">famicase 2022</a></p>
 
-                <tr>
-                   <td>27/04</td>
-                   <td><a class="inline" href="../pages/notes/280422_texttohtml.html">text to html</a></td>
-                </tr>
-                
-                <tr>
-                   <td>25/04</td>
-                   <td><a class="inline" href="../pages/notes/250422_hashtables.html">hash tables</a></td>
-                </tr>
-            </table>
-            <p></p>
+                <p class="filterDiv cs" style="margin-left: 3em">27/04<a style="margin-left: 3em" class="inline" href="../pages/notes/280422_texttohtml.html">text to html</a></p>
+
+                <p class="filterDiv cs" style="margin-left: 3em">25/04<a style="margin-left: 3em" class="inline" href="../pages/notes/250422_hashtables.html">hash tables</a></p>
+            </div>
 
             <!-- 2021 -->
 
-            <br>
-            <div class="header">
+            <div class=" filterDiv thoughts header">
+                <br>
                 2021
             </div>
-            <p></p>
-            <table>
-                <tr>
-                    <td>09/08</td>
-                    <td><a class="inline" href="../pages/notes/090821_loudworld.html">loud world</a></td>
-                </tr>
+            <div>
+                <p class="filterDiv thoughts" style="margin-left: 3em">09/08<a style="margin-left: 3em" class="inline" href="../pages/notes/090821_loudworld.html">loud world</a></p>
 
-                <tr>
-                    <td>28/01</td>
-                    <td><a class="inline" href="../pages/notes/280121_chasingdusk.html">chasing blue dusk</a></td>
-                </tr>
-            </table>
-            <p></p>
+                <p class="filterDiv thoughts" style="margin-left: 3em">28/01<a style="margin-left: 3em" class="inline" href="../pages/notes/280121_chasingdusk.html">chasing blue dusk</a></p>
+            </div>
 
             <!-- 2020 -->
 
-            <br>
-            <div class="header">
+            <div class="filterDiv stories art thoughts header">
+                <br>
                 2020
             </div>
-            <p></p>
-            <table>
-                <tr>
-                    <td>14/08</td>
-                    <td><a class="inline" href="../pages/notes/140820_zinedefexcerpts.html">excerpts from zinedef</a></td>
-                </tr>
+            <div>
+                <p class="filterDiv stories art" style="margin-left: 3em">14/08<a style="margin-left: 3em" class="inline" href="../pages/notes/140820_zinedefexcerpts.html">excerpts from zinedef</a></p>
 
-                <tr>
-                    <td>09/08</td>
-                    <td><a class="inline" href="../pages/notes/090820_darkforest.html">reflections on the dark forest</a></td>
-                </tr>
-            </table>
-            <p></p>
+                <p class="filterDiv thoughts" style="margin-left: 3em">09/08<a style="margin-left: 3em" class="inline" href="../pages/notes/090820_darkforest.html">reflections on the dark forest</a></p>
+            </div>
 
             <!-- 2019 -->
 
-            <br>
-            <div class="header">
+            <div class="filterDiv thoughts header">
+                <br>
                 2019
             </div>
-            <p></p>
-            <table>
-                <tr>
-                    <td>26/11</td>
-                    <td><a class="inline" href="../pages/notes/261119_thoughtsacts.html">thoughts / acts</a></td>
-                </tr>
+            <div>
+                <p class="filterDiv stories art" style="margin-left: 3em">26/11<a style="margin-left: 3em" class="inline" href="../pages/notes/261119_thoughtsacts.html">thoughts / acts</a></p>
 
-                <tr>
-                    <td>30/07</td>
-                    <td><a class="inline" href="../pages/notes/300719_internalmonologues.html">internal monologues</a></td>
-                </tr>
+                <p class="filterDiv thoughts" style="margin-left: 3em">30/07<a style="margin-left: 3em" class="inline" href="../pages/notes/300719_internalmonologues.html">internal monologues</a></p>
 
-                <tr>
-                    <td>30/04</td>
-                    <td><a class="inline" href="../pages/notes/130319_trainlounge.html">train lounge</a></td>
-                </tr>
-            </table>
-            <p></p>
+                <p class="filterDiv thoughts" style="margin-left: 3em">30/04<a style="margin-left: 3em" class="inline" href="../pages/notes/130319_trainlounge.html">train lounge</a></p>
+            </div>
 
             <!-- 2018 -->
 
-            <br>
-            <div class="header">
+            <div class="filterDiv thoughts stories header">
+                <br>
                 2018
             </div>
-            <p></p>
-            <table>
-                <tr>
-                    <td>09/12</td>
-                    <td><a class="inline" href="../pages/notes/091218_cuppedhands.html">cupped hands</a></td>
-                </tr>
+            <div>
+                <p class="filterDiv stories" style="margin-left: 3em">09/12<a style="margin-left: 3em" class="inline" href="../pages/notes/091218_cuppedhands.html">cupped hands</a></p>
 
-                <tr>
-                    <td>31/10</td>
-                    <td><a class="inline" href="../pages/notes/311018_crowdlag.html">walking in crowds</a></td>
-                </tr>
-            </table>
-            <p></p>
+                <p class="filterDiv thoughts" style="margin-left: 3em">31/10<a style="margin-left: 3em" class="inline" href="../pages/notes/311018_crowdlag.html">walking in crowds</a></p>
+            </div>
 
             <br>
             <a class="main" href="../index.html">⁖ return to main page</a>
         </div>
+        <script src="../js/filterElements.js"></script>
     </body>
 </html>

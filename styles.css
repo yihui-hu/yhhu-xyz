@@ -185,3 +185,39 @@ table th {
     line-height:1.2;
 }
 
+.container {
+  overflow: hidden;
+}
+
+.filterDiv {
+  display: none; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  font-family: 'printveticaregular';
+  color: rgb(35, 35, 35);
+  font-size: 15px;
+  margin-right: 0.5em;
+  border: none;
+  outline: none;
+  padding: 8px 10px;
+  border-radius: 3px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Add a light grey background on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: rgb(101, 101, 101);
+  color: white;
+}
