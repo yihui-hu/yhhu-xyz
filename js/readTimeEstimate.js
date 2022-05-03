@@ -8,5 +8,5 @@ function readTimeEstimate() {
     // get total no. of words by splitting the text by spaces
     const words = text.split(' ').length - 8;
     const minutes = Math.ceil(words / wpm);
-    document.getElementById("time").innerText = `${minutes} minute read \u00A0 | \u00A0 ${words} words`;
+    document.getElementById("time").innerText = `${minutes} minute read`;
 }
