@@ -207,7 +207,7 @@ table th {
   border: none;
   outline: none;
   padding: 8px 10px;
-  border-radius: 3px;
+  border-radius: 25px;
   background-color: #f1f1f1;
   cursor: pointer;
 }
