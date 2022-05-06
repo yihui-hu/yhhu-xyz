@@ -1,15 +1,25 @@
 /* html styling from swyx's 100 bytes of css  */
 
-html.index {
-    line-height: 1.75;
-    padding: 4vw;
-    font-size: 1.25em;
-    background-image: url(./images/indexbg.png);
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #fcfcfc;
+.content{
+  line-height: 1.75;
+  font-size: 1.25em;
+  padding: 3vw;
+  position: absolute;
+  left: 41%; 
+  transform: translateX(-50%);
+  width: 80%;
 }
+
+.indexbg {
+  background: url('./images/indexbg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
 
 html.main {
   max-width: 65ch;
