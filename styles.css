@@ -1,13 +1,11 @@
 /* html styling from swyx's 100 bytes of css  */
 
 .content{
-  line-height: 1.75;
-  font-size: 1.25em;
   padding: 3vw;
   position: absolute;
-  left: 41%; 
+  left: 51%; 
   transform: translateX(-50%);
-  width: 80%;
+  width: 100%;
 }
 
 .indexbg {
@@ -16,6 +14,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: fixed;
+  right: 1%; 
   height: 100vh;
   width: 100vw;
 }
