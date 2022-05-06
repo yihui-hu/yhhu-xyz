@@ -117,7 +117,7 @@ img.normal {
 
 img.border {
   height: auto;
-  max-width: 99.5%;
+  max-width: 99%;
   border-radius: 4px;
   border: 1px solid rgb(237, 237, 237);
   margin-top: 10px;
