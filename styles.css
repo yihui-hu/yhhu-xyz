@@ -29,6 +29,7 @@ html.main {
   max-width: 600px;
   font-size: 1.25em;
   background-color: #fcfcfc;
+  overflow-x: hidden;
 }
 
 html.normal {
@@ -39,6 +40,7 @@ html.normal {
   max-width: 600px;
   font-size: 1.25em;
   background-color: #fcfcfc;
+  overflow-x: hidden;
 }
   
 @font-face {
@@ -65,13 +67,6 @@ body.main{
 
 body.copy{
   line-height: 1.6;
-}
-
-.index {
-  color: rgb(191, 191, 191);
-  font-family: 'printveticaregular', Helvetica, Arial;
-  font-style: bold;
-  font-size: 17px;
 }
 
 .header {
@@ -101,6 +96,13 @@ body.copy{
   font-style: italic;
 }
 
+.index {
+  color: rgb(191, 191, 191);
+  font-family: 'printveticaregular', Helvetica, Arial;
+  font-style: bold;
+  font-size: 2.3vh;
+}
+
 .indexcopy {
   font-family: 'Adobe Caslon Pro','Times New Roman', Times, serif;  
   color: rgba(0, 0, 0, 0.8);
@@ -108,7 +110,7 @@ body.copy{
   font-style: normal;
   line-height: 50%;
   margin-bottom: 2.5em; 
-  font-size: 2.9vh;
+  font-size: 2.8vh;
 }
 
 p {
