@@ -1,35 +1,72 @@
 <!DOCTYPE html>
 <html class="index" lang="en" dir="ltr">
     <head>
-        <title>hu yihui</title>
+        <title>Hu Yihui</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
+        <style>
+            * {
+              box-sizing: border-box;
+            }
+            
+            /* Create two equal columns that floats next to each other */
+            .column {
+              float: left;
+              width: 33%;
+            }
+            
+            /* Clear floats after the columns */
+            .row:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            
+            /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+            @media screen and (max-width: 600px) {
+              .column {
+                width: 100%;
+              }
+            }
+        </style>
     </head>
     <body class="main">
         <div class="container">
-            <p class="header">who <span style="margin-left: 7.7em;" class="rightspacer">yihui</span></p>
-            
-            <br>
-            <p class="header">what <span style="margin-left: 7.4em;" class="rightspacer">design & cs</span></p>
-            
-            <br>
-            <p class="header">where <span style="margin-left: 6.95em;" class="rightspacer">singapore / usa</span></p>
-            
-            <br>
-            <p class="header">how <span style="margin-left: 7.8em;" class="rightspacer">huh</span></p>
-            
-            <br>
-            <p class="header">currently <span class="rightspacer">coding this website</span></p>
-            
-            <p style="margin-top:21em"></p>
-            
-            <p></p>
-            <footer id="footer">
-                <a class="main" href="./pages/about.html">☀&#xFE0E; about</a>
-                <a class="main" href="./pages/projects.html">✦&#xFE0E; works</a>
-                <a class="main" href="./pages/notes.html">⚛&#xFE0E; notes</a>
-            </footer>
+            <a class="main" href="./pages/about.html">☀&#xFE0E; about</a>
+            <a class="main" href="./pages/projects.html">✦&#xFE0E; works</a>
+            <a class="main" href="./pages/notes.html">⚛&#xFE0E; notes</a>
+        </div>
+
+        <p class="margin-bottom:10em"><br></p>
+
+        <div class="row">
+            <div class="column">
+                <p class="index">who</p>
+                <p class="indexcopy">yihui</p>
+
+                <p class="index">what</p>
+                <p class="indexcopy">design & cs</p>
+                
+                <p class="index">where</p>
+                <p class="indexcopy"> singapore / usa</p>
+                
+                <p class="index">how</p>
+                <p class="indexcopy">huh</p>
+                
+                <p class="index">currently</p>
+                <p class="indexcopy">coding this website</p>
+            </div>
+
+            <!-- spacer-->
+            <div class="column">
+                <p></p>
+            </div>
+
+            <div class="column">
+                <p class="index">works</p>
+                <p style="margin-bottom:2.5em; font-size: 1.5vw">yihui</p>
+            </div>
         </div>
     </body>
 </html>

@@ -1,10 +1,8 @@
 /* html styling from swyx's 100 bytes of css  */
 
 html.index {
-    max-width: 65ch;
     line-height: 1.75;
-    padding: 3vw;
-    max-width: 600px;
+    padding: 4vw;
     font-size: 1.25em;
     background-image: url(./images/indexbg.png);
     background-position: center center;
@@ -31,22 +29,6 @@ html.normal {
   font-size: 1.25em;
   background-color: #fcfcfc;
 }
-
-#page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
-#content-wrap {
-  padding-bottom: 5rem;    /* Footer height */
-}
-
-#footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 4rem;            /* Footer height */
-}
   
 @font-face {
     font-family: 'printveticaregular';
@@ -62,6 +44,13 @@ body.main{
 
 body.copy{
   line-height: 1.6;
+}
+
+.index {
+  color: rgb(191, 191, 191);
+  font-family: 'printveticaregular', Helvetica, Arial;
+  font-style: bold;
+  font-size: 18px;
 }
 
 .header {
@@ -89,6 +78,14 @@ body.copy{
   font-family: 'Georgia', 'Times New Roman', Times, serif;
   font-size: 17px;
   font-style: italic;
+}
+
+.indexcopy {
+  font-family: 'Times New Roman', Times, serif;  
+  line-height: 0%;
+  margin-bottom: 2.5em; 
+  font-size: 1.5vw;
+  font-kerning: none;
 }
 
 p {
