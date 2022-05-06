@@ -1,11 +1,10 @@
-/* html styling from swyx's 100 bytes of css  */
-
 .content{
-  padding: 3vw;
+  margin-top: 4vw;
+  margin-left: 1.5vw;
   position: absolute;
   left: 51%; 
   transform: translateX(-50%);
-  width: 100%;
+  width: 95%;
   overflow-x: hidden;
 }
 
@@ -18,9 +17,7 @@
   right: 1%; 
   height: 100vh;
   width: 100vw;
-  overflow-x: hidden;
 }
-
 
 html.main {
   max-width: 65ch;
@@ -29,7 +26,6 @@ html.main {
   max-width: 600px;
   font-size: 1.25em;
   background-color: #fcfcfc;
-  overflow-x: hidden;
 }
 
 html.normal {
@@ -40,7 +36,6 @@ html.normal {
   max-width: 600px;
   font-size: 1.25em;
   background-color: #fcfcfc;
-  overflow-x: hidden;
 }
   
 @font-face {
@@ -100,7 +95,7 @@ body.copy{
   color: rgb(191, 191, 191);
   font-family: 'printveticaregular', Helvetica, Arial;
   font-style: bold;
-  font-size: 2.3vh;
+  font-size: 17px;
 }
 
 .indexcopy {
