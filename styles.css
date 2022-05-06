@@ -1,6 +1,6 @@
 /* html styling from swyx's 100 bytes of css  */
 
-html.main {
+html.index {
     max-width: 65ch;
     line-height: 1.75;
     padding: 3vw;
@@ -11,6 +11,15 @@ html.main {
     background-attachment: fixed;
     background-size: cover;
     background-color: #fcfcfc;
+}
+
+html.main {
+  max-width: 65ch;
+  line-height: 1.75;
+  padding: 3vw;
+  max-width: 600px;
+  font-size: 1.25em;
+  background-color: #fcfcfc;
 }
 
 html.normal {
