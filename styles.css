@@ -22,6 +22,22 @@ html.normal {
   font-size: 1.25em;
   background-color: #fcfcfc;
 }
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 5rem;    /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;            /* Footer height */
+}
   
 @font-face {
     font-family: 'printveticaregular';
