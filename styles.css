@@ -6,6 +6,8 @@ html.main {
     padding: 3vw;
     max-width: 600px;
     font-size: 1.25em;
+    background-image: url(./images/indexbg.png);
+    background-color: #fcfcfc;
 }
 
 html.normal {
@@ -15,6 +17,7 @@ html.normal {
   padding: 3vw;
   max-width: 600px;
   font-size: 1.25em;
+  background-color: #fcfcfc;
 }
   
 @font-face {
@@ -26,12 +29,10 @@ html.normal {
 }
 
 body.main{
-  background-color: #fcfcfc;
   line-height: 1.2;
 }
 
 body.copy{
-  background-color: #fcfcfc;
   line-height: 1.6;
 }
 
