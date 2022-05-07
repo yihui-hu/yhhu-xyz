@@ -1,6 +1,6 @@
 .content{
-  margin-top: 4.5vw;
-  margin-left: 1.5vh;
+  margin-top: 3.5vw;
+  margin-left: 1vh;
   position: absolute;
   left: 51%; 
   transform: translateX(-50%);
@@ -106,7 +106,7 @@ body.copy{
   line-height: 50%;
   margin-top: 0%;
   margin-bottom: 2.5em; 
-  font-size: 2.8vh;
+  font-size: 2.7vh;
 }
 
 p, li {
