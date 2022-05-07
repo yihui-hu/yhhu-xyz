@@ -109,7 +109,7 @@ body.copy{
   font-size: 2.8vh;
 }
 
-p {
+p, li {
     color: black;
     font-family: 'Georgia', 'Times New Roman', Times, serif;
     font-size: 17px;
@@ -171,7 +171,7 @@ a.inline:hover {
   color: rgb(152, 166, 209);
 }
 
-a.inline, li {
+a.inline {
   color: rgb(9, 57, 202);
     font-family: 'Georgia', 'Times New Roman', Times, serif;
     font-size: 17px;
