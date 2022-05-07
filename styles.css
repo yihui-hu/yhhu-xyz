@@ -100,7 +100,7 @@ body.copy{
 
 .indexcopy {
   font-family: 'Adobe Caslon Pro','Times New Roman', Times, serif;  
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.9);
   font-weight: normal;
   font-style: normal;
   line-height: 50%;
@@ -144,7 +144,7 @@ a.footnote {
 }
 
 a.index:visited {
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.9);
 }
 
 a.index:hover {
@@ -153,7 +153,7 @@ a.index:hover {
 
 a.index {
   font-family: 'Adobe Caslon Pro','Times New Roman', Times, serif;  
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.9);
   font-weight: normal;
   font-style: normal;
   line-height: 50%;
