@@ -95,7 +95,7 @@ body.copy{
   color: rgb(191, 191, 191);
   font-family: 'printveticaregular', Helvetica, Arial;
   font-style: bold;
-  font-size: 17px;
+  font-size: 2vh;
 }
 
 .indexcopy {
@@ -115,6 +115,10 @@ p {
     font-size: 17px;
 }
 
+a.main:hover {
+  color: rgb(152, 166, 209);
+}
+
 a.main {
     color: rgb(39, 86, 224);
     font-family: 'printveticaregular', Helvetica, Arial;
@@ -123,14 +127,52 @@ a.main {
     text-decoration: none
 }
 
+a.footnote:visited {
+  color: rgb(9, 57, 202);
+}
+
+a.footnote:hover {
+  color: rgb(152, 166, 209);
+}
+
 a.footnote {
+  color: rgb(9, 57, 202);
   font-family: 'Georgia', 'Times New Roman', Times, serif;
   font-size: 15px;
   margin-left: 2px;
   text-decoration: none
 }
 
+a.index:visited {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+a.index:hover {
+  color:rgb(146, 146, 146);
+}
+
+a.index {
+  font-family: 'Adobe Caslon Pro','Times New Roman', Times, serif;  
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: normal;
+  font-style: normal;
+  line-height: 50%;
+  margin-top: 0%;
+  margin-bottom: 2.5em; 
+  font-size: 2.8vh;
+  text-decoration: none;
+}
+
+a.inline:visited {
+  color: rgb(9, 57, 202);
+}
+
+a.inline:hover {
+  color: rgb(152, 166, 209);
+}
+
 a.inline, li {
+  color: rgb(9, 57, 202);
     font-family: 'Georgia', 'Times New Roman', Times, serif;
     font-size: 17px;
     text-decoration: none
@@ -264,6 +306,7 @@ table th {
 /* Add a light grey background on mouse-over */
 .btn:hover {
   background-color: #ddd;
+  cursor: pointer;
 }
 
 .btn.active {
