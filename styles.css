@@ -68,26 +68,26 @@ body.copy{
   color: rgb(191, 191, 191);
   font-family: 'printveticaregular', Helvetica, Arial;
   font-style: bold;
-  font-size: 16px;
+  font-size: 0.8rem;
 }
 
 .rightspacer {
   color: black;
   font-family: 'Georgia', 'Times New Roman', Times, serif;
-  font-size: 17px;
+  font-size: 0.8rem;
   margin-left: 6em;
 }
 
 .readtime {
   color: rgb(170, 170, 170);
   font-family: 'Georgia', 'Times New Roman', Times, serif;
-  font-size: 16px;
+  font-size: 0.8rem;
 }
 
 .italic {
   color: black;
   font-family: 'Georgia', 'Times New Roman', Times, serif;
-  font-size: 17px;
+  font-size: 0.85rem;
   font-style: italic;
 }
 
@@ -112,7 +112,7 @@ body.copy{
 p, li {
     color: black;
     font-family: 'Georgia', 'Times New Roman', Times, serif;
-    font-size: 17px;
+    font-size: 0.85rem;
 }
 
 a.main:hover {
@@ -122,7 +122,7 @@ a.main:hover {
 a.main {
     color: rgb(39, 86, 224);
     font-family: 'printveticaregular', Helvetica, Arial;
-    font-size: 16px;
+    font-size: 0.8rem;
     margin-right: 2em;
     text-decoration: none
 }
@@ -138,7 +138,7 @@ a.footnote:hover {
 a.footnote {
   color: rgb(9, 57, 202);
   font-family: 'Georgia', 'Times New Roman', Times, serif;
-  font-size: 15px;
+  font-size: 0.72rem;
   margin-left: 2px;
   text-decoration: none
 }
@@ -174,7 +174,7 @@ a.inline:hover {
 a.inline {
   color: rgb(9, 57, 202);
     font-family: 'Georgia', 'Times New Roman', Times, serif;
-    font-size: 17px;
+    font-size: 0.85rem;
     text-decoration: none
 }
 
@@ -215,7 +215,7 @@ img.border {
 figcaption {
   color: rgb(152, 152, 152);
   font-family: 'Georgia', Helvetica, Arial;
-  font-size: 15px;
+  font-size: 0.75rem;
   text-align: center;
 }
 
@@ -243,7 +243,7 @@ table td, table th {
     padding:0.35em 0.75em;
     vertical-align:top;
     font-family: 'Georgia', 'Times New Roman', Times, serif;
-    font-size: 17px;
+    font-size: 0.85rem;
     border:1px solid #e6e6e6;
     border-top:0;
     border-left:0;
@@ -293,7 +293,7 @@ table th {
 .btn {
   font-family: 'printveticaregular';
   color: rgb(35, 35, 35);
-  font-size: 15px;
+  font-size: 0.77rem;
   margin-right: 0.5em;
   border: none;
   outline: none;
