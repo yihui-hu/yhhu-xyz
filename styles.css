@@ -29,7 +29,7 @@ html.main {
   padding: 3vw;
   max-width: 600px;
   font-size: 1.25em;
-  background-color: #fcfcfc;
+  background-color: rgb(242, 242, 242);
 }
 
 html.normal {
@@ -39,7 +39,7 @@ html.normal {
   padding: 3vw;
   max-width: 600px;
   font-size: 1.25em;
-  background-color: #fcfcfc;
+  background-color: rgb(242, 242, 242);
 }
   
 @font-face {
@@ -69,7 +69,7 @@ body.copy{
 }
 
 .header {
-  color: rgb(191, 191, 191);
+  color: rgb(168, 168, 168);
   font-family: 'printveticaregular', Helvetica, Arial;
   font-style: bold;
   font-size: 0.8rem;
@@ -83,7 +83,7 @@ body.copy{
 }
 
 .readtime {
-  color: rgb(170, 170, 170);
+  color: rgb(168, 168, 168);
   font-family: 'Georgia', 'Times New Roman', Times, serif;
   font-size: 0.8rem;
 }
@@ -96,7 +96,7 @@ body.copy{
 }
 
 .index {
-  color: rgb(191, 191, 191);
+  color: rgb(186, 186, 186);
   font-family: 'printveticaregular', Helvetica, Arial;
   font-style: bold;
   font-size: 2.1vh;
@@ -212,7 +212,8 @@ img.border {
   height: auto;
   max-width: 99%;
   border-radius: 4px;
-  border: 1px solid rgb(237, 237, 237);
+  border: 1.5px solid rgb(222, 222, 222);
+  mix-blend-mode:darken;
   margin-top: 10px;
 }
 
@@ -240,7 +241,7 @@ table {
   
 table caption {
     font-size:0.9em;
-    background:white;
+    background-color: rgb(242, 242, 242);
 }
 
 table td, table th {
@@ -248,14 +249,14 @@ table td, table th {
     vertical-align:top;
     font-family: 'Georgia', 'Times New Roman', Times, serif;
     font-size: 0.85rem;
-    border:1px solid #e6e6e6;
+    border:1px solid #dddddd;
     border-top:0;
     border-left:0;
 }
   
 table td:first-child, table th:first-child {
     padding-left:0;
-    background-image:linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%);
+    background-color: rgb(242, 242, 242);
     background-size:2px 100%;
     background-repeat:no-repeat;
 }
@@ -263,14 +264,14 @@ table td:first-child, table th:first-child {
 table td:last-child, table th:last-child {
     padding-right:0;
     border-right:0;
-    background-image:linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
+    background-color: rgb(242, 242, 242);
     background-position:100% 0;
     background-size:2px 100%;
     background-repeat:no-repeat;
 }
 
 table td:only-child, table th:only-child {
-    background-image:linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%), linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
+    background-color: rgb(242, 242, 242);
     background-position:0 0, 100% 0;
     background-size:2px 100%, 2px 100%;
     background-repeat:no-repeat, no-repeat;
@@ -303,17 +304,17 @@ table th {
   outline: none;
   padding: 8px 10px;
   border-radius: 25px;
-  background-color: #f1f1f1;
+  background-color: #e1e1e1;
   cursor: poGeorgia;
 }
 
 /* Add a light grey background on mouse-over */
 .btn:hover {
-  background-color: #ddd;
+  background-color: rgb(206, 206, 206);
   cursor: pointer;
 }
 
 .btn.active {
   background-color: rgb(101, 101, 101);
-  color: white;
+  color: rgb(242, 242, 242);
 }
