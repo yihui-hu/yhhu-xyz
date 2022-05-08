@@ -105,6 +105,7 @@ body.copy{
 
 .indexcopy {
   font-family: 'Times New Roman', Times, serif;  
+  letter-spacing: 0.2px;
   color: rgba(0, 0, 0, 0.9);
   font-weight: normal;
   font-style: normal;
@@ -158,6 +159,7 @@ a.index:hover {
 
 a.index {
   font-family: 'Times New Roman', Times, serif;  
+  letter-spacing: 0.2px;
   color: rgba(0, 0, 0, 0.9);
   font-weight: normal;
   font-style: normal;
