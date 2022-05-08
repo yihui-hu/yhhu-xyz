@@ -78,20 +78,20 @@ body.copy{
 
 .rightspacer {
   color: black;
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', 'Times New Roman', Times, serif;
   font-size: 0.8rem;
   margin-left: 6em;
 }
 
 .readtime {
   color: rgb(168, 168, 168);
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', 'Times New Roman', Times, serif;
   font-size: 0.8rem;
 }
 
 .italic {
   color: black;
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', 'Times New Roman', Times, serif;
   font-size: 0.85rem;
   font-style: italic;
 }
@@ -104,7 +104,7 @@ body.copy{
 }
 
 .indexcopy {
-  font-family: 'Adobe Caslon Pro','Times New Roman', Times, serif;  
+  font-family: 'Times New Roman', Times, serif;  
   color: rgba(0, 0, 0, 0.9);
   font-weight: normal;
   font-style: normal;
@@ -116,8 +116,8 @@ body.copy{
 
 p, li {
     color: black;
-    font-family: 'Georgia', 'Times New Roman', Times, serif;
-    font-size: 0.85rem;
+    font-family: 'Times New Roman', 'Times New Roman', Times, serif;
+    font-size: 0.9rem;
 }
 
 a.main:hover {
@@ -142,7 +142,7 @@ a.footnote:hover {
 
 a.footnote {
   color: rgb(9, 57, 202);
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', 'Times New Roman', Times, serif;
   font-size: 0.72rem;
   margin-left: 2px;
   text-decoration: none
@@ -157,7 +157,7 @@ a.index:hover {
 }
 
 a.index {
-  font-family: 'Adobe Caslon Pro','Times New Roman', Times, serif;  
+  font-family: 'Times New Roman', Times, serif;  
   color: rgba(0, 0, 0, 0.9);
   font-weight: normal;
   font-style: normal;
@@ -176,13 +176,13 @@ a.inline:hover {
 
 a.inline {
   color: rgb(9, 57, 202);
-    font-family: 'Georgia', 'Times New Roman', Times, serif;
-    font-size: 0.85rem;
+    font-family: 'Times New Roman', 'Times New Roman', Times, serif;
+    font-size: 0.9rem;
     text-decoration: none
 }
 
 a.telescoping {
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', 'Times New Roman', Times, serif;
   font-size: 40px;
   text-decoration: none
 }
@@ -218,8 +218,8 @@ img.border {
 
 figcaption {
   color: rgb(152, 152, 152);
-  font-family: 'Georgia', Helvetica, Arial;
-  font-size: 0.75rem;
+  font-family: 'Times New Roman', Helvetica, Arial;
+  font-size: 0.8rem;
   text-align: center;
 }
 
@@ -246,8 +246,8 @@ table caption {
 table td, table th {
     padding:0.35em 0.75em;
     vertical-align:top;
-    font-family: 'Georgia', 'Times New Roman', Times, serif;
-    font-size: 0.85rem;
+    font-family: 'Times New Roman', 'Times New Roman', Times, serif;
+    font-size: 0.9rem;
     border:1px solid #dddddd;
     border-top:0;
     border-left:0;
@@ -304,7 +304,7 @@ table th {
   padding: 8px 10px;
   border-radius: 25px;
   background-color: #e1e1e1;
-  cursor: poGeorgia;
+  cursor: poTimes New Roman;
 }
 
 /* Add a light grey background on mouse-over */
