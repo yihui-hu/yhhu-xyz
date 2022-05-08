@@ -14,6 +14,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: fixed;
+  opacity: 80%;
   right: 1%; 
   height: 100vh;
   width: 100vw;
