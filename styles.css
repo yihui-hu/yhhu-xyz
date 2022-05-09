@@ -74,20 +74,20 @@ body.copy{
 .rightspacer {
   color: black;
   font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   margin-left: 6em;
 }
 
 .readtime {
   color: rgb(168, 168, 168);
   font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .italic {
   color: black;
   font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-style: italic;
 }
 
@@ -132,7 +132,7 @@ a.index {
 p, li {
     color: black;
     font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-    font-size: 1em;
+    font-size: 0.95em;
 }
 
 a.main:hover {
@@ -142,7 +142,7 @@ a.main:hover {
 a.main {
     color: rgb(39, 86, 224);
     font-family: 'printveticaregular', Helvetica, Arial;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     margin-right: 2em;
     text-decoration: none
 }
@@ -174,7 +174,7 @@ a.inline:hover {
 a.inline {
   color: rgb(9, 57, 202);
     font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-    font-size: 1rem;
+    font-size: 0.95rem;
     text-decoration: none
 }
 
@@ -236,7 +236,7 @@ table {
 }
   
 table caption {
-    font-size:1em;
+    font-size:0.95em;
     background-color: rgb(242, 242, 242);
 }
 
@@ -244,7 +244,7 @@ table td, table th {
     padding:0.35em 0.75em;
     vertical-align:top;
     font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-    font-size: 1rem;
+    font-size: 0.95rem;
     border:1px solid #dddddd;
     border-top:0;
     border-left:0;
