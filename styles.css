@@ -60,39 +60,34 @@ html.normal {
   font-display: swap;
 }
 
-body.main{
-  line-height: 1.2;
-  overflow-x: hidden;
-}
-
 body.copy{
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .header {
   color: rgb(168, 168, 168);
   font-family: 'printveticaregular', Helvetica, Arial;
   font-style: bold;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
 
 .rightspacer {
   color: black;
   font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   margin-left: 6em;
 }
 
 .readtime {
   color: rgb(168, 168, 168);
   font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 
 .italic {
   color: black;
   font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-style: italic;
 }
 
@@ -100,12 +95,12 @@ body.copy{
   color: rgb(186, 186, 186);
   font-family: 'printveticaregular', Helvetica, Arial;
   font-style: bold;
-  font-size: 2.1vh;
+  font-size: 2vh;
 }
 
 .indexcopy {
-  font-family: 'Times New Roman', Times, serif;  
-  letter-spacing: 0.2px;
+  font-family: 'Adobe Caslon Pro', 'Times New Roman', Times, serif;  
+  letter-spacing: 0.1px;
   color: rgba(0, 0, 0, 0.9);
   font-weight: normal;
   font-style: normal;
@@ -115,10 +110,29 @@ body.copy{
   font-size: 2.7vh;
 }
 
+a.index:visited {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+a.index:hover {
+  color:rgb(146, 146, 146);
+}
+
+a.index {
+  font-family: 'Adobe Caslon Pro', 'Times New Roman', Times, serif;  
+  letter-spacing: 0.1px;
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: normal;
+  font-style: normal;
+  line-height: 50%;
+  font-size: 2.7vh;
+  text-decoration: none;
+}
+
 p, li {
     color: black;
     font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-    font-size: 0.9rem;
+    font-size: 1em;
 }
 
 a.main:hover {
@@ -128,7 +142,7 @@ a.main:hover {
 a.main {
     color: rgb(39, 86, 224);
     font-family: 'printveticaregular', Helvetica, Arial;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     margin-right: 2em;
     text-decoration: none
 }
@@ -144,28 +158,9 @@ a.footnote:hover {
 a.footnote {
   color: rgb(9, 57, 202);
   font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   margin-left: 2px;
   text-decoration: none
-}
-
-a.index:visited {
-  color: rgba(0, 0, 0, 0.9);
-}
-
-a.index:hover {
-  color:rgb(146, 146, 146);
-}
-
-a.index {
-  font-family: 'Times New Roman', Times, serif;  
-  letter-spacing: 0.2px;
-  color: rgba(0, 0, 0, 0.9);
-  font-weight: normal;
-  font-style: normal;
-  line-height: 50%;
-  font-size: 2.7vh;
-  text-decoration: none;
 }
 
 a.inline:visited {
@@ -179,7 +174,7 @@ a.inline:hover {
 a.inline {
   color: rgb(9, 57, 202);
     font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
     text-decoration: none
 }
 
@@ -221,7 +216,7 @@ img.border {
 figcaption {
   color: rgb(152, 152, 152);
   font-family: 'Times New Roman', Helvetica, Arial;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   text-align: center;
 }
 
@@ -241,7 +236,7 @@ table {
 }
   
 table caption {
-    font-size:0.9em;
+    font-size:1em;
     background-color: rgb(242, 242, 242);
 }
 
@@ -249,7 +244,7 @@ table td, table th {
     padding:0.35em 0.75em;
     vertical-align:top;
     font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
     border:1px solid #dddddd;
     border-top:0;
     border-left:0;
