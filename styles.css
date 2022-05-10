@@ -140,9 +140,9 @@ a.main:hover {
 }
 
 a.main {
-    color: rgb(39, 86, 224);
+    color: rgb(50, 50, 50);
     font-family: 'printveticaregular', Helvetica, Arial;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     margin-right: 2em;
     text-decoration: none
 }
@@ -173,9 +173,9 @@ a.inline:hover {
 
 a.inline {
   color: rgb(9, 57, 202);
-    font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-    font-size: 0.95rem;
-    text-decoration: none
+  font-family: 'Times New Roman', 'Times New Roman', Times, serif;
+  font-size: 0.95rem;
+  text-decoration: none
 }
 
 a.telescoping {
