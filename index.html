@@ -1,43 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <title>Hu Yihui</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <style>
-            * {
-              box-sizing: border-box;
-            }
-            
-            /* Create two equal columns that floats next to each other */
-            .column {
-              float: left;
-              width: 33%;
-            }
-            
-            /* Clear floats after the columns */
-            .row:after {
-              content: "";
-              display: table;
-              clear: both;
-            }
-            
-            /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-            @media screen and (max-width: 1024px) {
-              .column {
-                width: 100%;
-              }
-            }
-        </style>
-    </head>
-    <body>
+
+<head>
+    <title>Hu Yihui</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="./js/lightdarkmode.js"></script>
+    <style>
+        * { box-sizing: border-box; }
+        /* Create two equal columns that floats next to each other */
+        .column { float: left; width: 33%; }
+        /* Clear floats after the columns */
+        .row:after { content: ""; display: table; clear: both; }
+        /* Responsive layout */
+        @media screen and (max-width: 1024px) { .column { width: 100%; } }
+    </style>
+</head>
+
+<body>
     <div class="indexbg"></div>
     <div class="content">
         <div class="container" style="margin-bottom: 5vh">
             <a class="main" style="font-size:2.1vh; margin-right: 2em;" href="./pages/about.html">☀&#xFE0E; about</a>
             <a class="main" style="font-size:2.1vh; margin-right: 2em;" href="./pages/projects.html">✦&#xFE0E; works</a>
             <a class="main" style="font-size:2.1vh; margin-right: 2em;" href="./pages/notes.html">⚛&#xFE0E; notes</a>
+            <button class="switcher" id="theme-switcher">☼&#xFE0E; / ☾&#xFE0E;</button>
         </div>
 
         <div class="row">
@@ -47,13 +35,13 @@
 
                 <p class="index">what</p>
                 <p class="indexcopy">design & cs</p>
-                
+
                 <p class="index">where</p>
                 <p class="indexcopy">singapore / usa</p>
-                
+
                 <p class="index">how</p>
                 <p class="indexcopy">huh</p>
-                
+
                 <p class="index">currently</p>
                 <p class="indexcopy" style="margin-bottom:1em">coding this website</p>
             </div>
@@ -87,5 +75,6 @@
             </div>
         </div>
     </div>
-    </body>
+</body>
+
 </html>
