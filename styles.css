@@ -1,281 +1,261 @@
-.content{
+/* LIGHT / DARK MODE */
+
+:root {
+  --background-color: rgb(242, 242, 242);
+  --text-color: rgba(0, 0, 0, 0.9);
+  --header-color: rgb(168, 168, 168);
+  --index-header-color: rgb(50, 50, 50);
+  --hover-color: rgb(152, 166, 209);
+  --link-color: rgb(9, 57, 202);
+  --img-border-color: rgb(222, 222, 222);
+  --button-color: #e1e1e1;
+  --button-hover-color: rgb(206, 206, 206);
+  --button-active-color: rgb(101, 101, 101);
+  --table-border-color: #dddddd;
+  --image-opacity: 100%;
+  --background-img: url("./images/indexbggrey.png");
+}
+
+[data-theme="dark"] {
+  --background-color:#061627;
+  --text-color: #b6bfcf;
+  --header-color: #b6bfcfa9;
+  --index-header-color: #b6bfcf;
+  --hover-color: rgb(82, 94, 128);
+  --link-color: #989fc1;
+  --img-border-color: #b6bfcf;
+  --button-color:  rgb(82, 94, 128);
+  --button-hover-color: rgb(127, 136, 162);
+  --button-active-color: #b6bfcf;
+  --table-border-color: rgb(82, 94, 128);
+  --image-opacity: 85%;
+  --background-img: url("./images/indexbgdark.png");
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.1s ease, background 0.3s ease;
+}
+
+.switcher {
+  border: none;
+  font-family: 'Times New Roman';
+  font-size: 1.8vh;
+  border-radius: 25px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  cursor: pointer;
+}
+
+/* FOR INDEX.HTML */
+
+div.content {
   margin-top: 3.5vw;
   margin-left: 1vh;
   position: absolute;
-  left: 51%; 
+  left: 51%;
   transform: translateX(-50%);
   width: 95%;
-  overflow-x: hidden;
 }
 
-.indexbg {
-  background: url('./images/indexbggrey.png');
+div.indexbg {
+  background: var(--background-img);
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
   position: fixed;
   opacity: 90%;
-  right: 0.9%; 
+  right: 0.9%;
   height: 100vh;
   width: 100vw;
 }
 
-html {
-  background-color: rgb(242, 242, 242);
-}
-
-html.main {
-  max-width: 65ch;
-  line-height: 1.75;
-  padding: 3vw;
-  max-width: 600px;
-  font-size: 1.25em;
-  background-color: rgb(242, 242, 242);
-}
-
-html.normal {
-  max-width: 65ch;
-  margin: auto;
-  line-height: 1.75;
-  padding: 3vw;
-  max-width: 600px;
-  font-size: 1.25em;
-  background-color: rgb(242, 242, 242);
-}
-  
-@font-face {
-    font-family: 'printveticaregular';
-    src: url('https://yhhu.xyz/fonts/printvetica-webfont.woff2') format('woff2'),
-         url('https://yhhu.xyz/fonts/printvetica-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-  font-family: 'Adobe Caslon Pro';
-  src: url('./fonts/ACaslonPro-Regular.woff2') format('woff2'),
-      url('./fonts/ACaslonPro-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-body.copy{
-  line-height: 1.5;
-}
-
-.header {
-  color: rgb(168, 168, 168);
-  font-family: 'printveticaregular', Helvetica, Arial;
-  font-style: bold;
-  font-size: 0.85rem;
-}
-
-.rightspacer {
-  color: black;
-  font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-  font-size: 0.8rem;
-  margin-left: 6em;
-}
-
-.readtime {
-  color: rgb(168, 168, 168);
-  font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-  font-size: 0.95rem;
-}
-
-.italic {
-  color: black;
-  font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-  font-size: 0.95rem;
-  font-style: italic;
-}
-
-.index {
-  color: rgb(186, 186, 186);
-  font-family: 'printveticaregular', Helvetica, Arial;
+p.index {
+  /* index 'prompts' */
+  color: var(--header-color);
+  font-family: "printveticaregular", Helvetica, Arial;
   font-style: bold;
   font-size: 2vh;
 }
 
-.indexcopy {
-  font-family: 'Adobe Caslon Pro', 'Times New Roman', Times, serif;  
+p.indexcopy {
+  font-family: "Adobe Caslon Pro", "Times New Roman", Times, serif;
   letter-spacing: 0.1px;
-  color: rgba(0, 0, 0, 0.9);
-  font-weight: normal;
-  font-style: normal;
+  color: var(--text-color);
   line-height: 50%;
   margin-top: 0%;
-  margin-bottom: 2.5em; 
+  margin-bottom: 2.5em;
   font-size: 2.7vh;
-}
-
-a.index:visited {
-  color: rgba(0, 0, 0, 0.9);
-}
-
-a.index:hover {
-  color:rgb(146, 146, 146);
 }
 
 a.index {
-  font-family: 'Adobe Caslon Pro', 'Times New Roman', Times, serif;  
-  letter-spacing: 0.1px;
-  color: rgba(0, 0, 0, 0.9);
-  font-weight: normal;
-  font-style: normal;
+  /* index.html header links */
+  color: var(--text-color);
+  font-family: "Adobe Caslon Pro", "Times New Roman", Times, serif;
   line-height: 50%;
   font-size: 2.7vh;
+}
+
+/* HTML STYLING */
+
+html {
+  background-color: var(--background-color);
+}
+
+html.centered {
+  max-width: 65ch;
+  margin: auto;
+  padding: 3vw;
+  max-width: 600px;
+}
+
+body.copy {
+  line-height: 1.5;
+}
+
+.header {
+  color: var(--header-color);
+  font-family: "printveticaregular", Helvetica, Arial;
+  font-size: 1.05rem;
+}
+
+.readtime {
+  color: var(--header-color);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.15rem;
+}
+
+/* BODY PARAGRAPH STYLING */
+
+p,
+li {
+  color: var(--text-color);
+  font-family: "Times New Roman", "Times New Roman", Times, serif;
+  font-size: 1.2em;
+}
+
+/* LINK STYLING */
+
+a {
+  /* default link styling */
+  color: var(--link-color);
+  font-family: "Times New Roman", "Times New Roman", Times, serif;
   text-decoration: none;
+  cursor: pointer;
 }
 
-p, li {
-    color: black;
-    font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-    font-size: 0.95em;
-}
-
-a.main:hover {
-  color: rgb(152, 166, 209);
+a.index:hover,
+a.main:hover,
+a.footnote:hover,
+a.inline:hover {
+  color: var(--hover-color);
 }
 
 a.main {
-    color: rgb(50, 50, 50);
-    font-family: 'printveticaregular', Helvetica, Arial;
-    font-size: 0.85rem;
-    margin-right: 1.5em;
-    text-decoration: none
-}
-
-a.footnote:visited {
-  color: rgb(9, 57, 202);
-}
-
-a.footnote:hover {
-  color: rgb(152, 166, 209);
+  /* general nav links */
+  color: var(--index-header-color);
+  font-family: "printveticaregular", Helvetica, Arial;
+  font-size: 1.05rem;
+  margin-right: 1.5em;
 }
 
 a.footnote {
-  color: rgb(9, 57, 202);
-  font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-  font-size: 0.74rem;
+  font-size: 1rem;
   margin-left: 2px;
-  text-decoration: none
-}
-
-a.inline:visited {
-  color: rgb(9, 57, 202);
-}
-
-a.inline:hover {
-  color: rgb(152, 166, 209);
-}
-
-a.inline {
-  color: rgb(9, 57, 202);
-  font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-  font-size: 0.95rem;
-  text-decoration: none
 }
 
 a.telescoping {
-  font-family: 'Times New Roman', 'Times New Roman', Times, serif;
   font-size: 40px;
-  text-decoration: none
+}
+
+/* IMAGE STYLING */
+
+img {
+  /* default image styling */
+  height: auto;
+  max-width: 100%;
+  border-radius: 4px;
+  margin-top: 10px;
+  opacity: var(--image-opacity);
 }
 
 img.grayscale {
-  height: auto;
-  max-width: 100%;
   filter: grayscale(100%) brightness(120%);
-  border-radius: 4px;
-}
-
-img.index {
-  height: auto;
-  max-width: 100%;
-  border-radius: 4px;
-}
-
-img.normal {
-  height: auto;
-  max-width: 100%;
-  border-radius: 4px;
-  margin-top: 10px;
 }
 
 img.border {
-  height: auto;
-  max-width: 99%;
-  border-radius: 4px;
-  border: 1.5px solid rgb(222, 222, 222);
-  mix-blend-mode:darken;
-  margin-top: 10px;
+  /* for images with blended in backgrounds */
+  /* max-width: 99%;
+  border: 1.5px solid var(--img-border-color); */
 }
 
 figcaption {
-  color: rgb(152, 152, 152);
-  font-family: 'Times New Roman', Helvetica, Arial;
-  font-size: 0.85rem;
+  /* image/figure captions */
+  color: var(--header-color);
+  font-size: 1.05rem;
   text-align: center;
 }
 
-/* tables from awsm.css */
+/* TABLE STYLING from awsm.css*/
 table {
-  display:inline-block;
-  border-spacing:0;
-  border-collapse:collapse;
-  overflow-x:auto;
-  max-width:100%;
-  text-align:left;
-  vertical-align:top;
-  background:linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%) 0 0, linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%) 100% 0;
-  background-attachment:scroll, scroll;
+  display: inline-block;
+  border-spacing: 0;
+  border-collapse: collapse;
+  overflow-x: auto;
+  max-width: 100%;
+  text-align: left;
+  vertical-align: top;
+  background-attachment: scroll, scroll;
   background-size: 1px 100%, 1px 100%;
-  background-repeat:no-repeat, no-repeat;
+  background-repeat: no-repeat, no-repeat;
+  color: var(--text-color);
 }
-  
+
 table caption {
-    font-size:0.95em;
-    background-color: rgb(242, 242, 242);
+  font-size: 1.2rem;
+  background-color: var(--background-color);
 }
 
-table td, table th {
-    padding:0.35em 0.75em;
-    vertical-align:top;
-    font-family: 'Times New Roman', 'Times New Roman', Times, serif;
-    font-size: 0.95rem;
-    border:1px solid #dddddd;
-    border-top:0;
-    border-left:0;
-}
-  
-table td:first-child, table th:first-child {
-    padding-left:0;
-    background-color: rgb(242, 242, 242);
-    background-size:2px 100%;
-    background-repeat:no-repeat;
-}
-  
-table td:last-child, table th:last-child {
-    padding-right:0;
-    border-right:0;
-    background-color: rgb(242, 242, 242);
-    background-position:100% 0;
-    background-size:2px 100%;
-    background-repeat:no-repeat;
+table td,
+table th {
+  padding: 0.35em 0.75em;
+  vertical-align: top;
+  font-family: "Times New Roman", "Times New Roman", Times, serif;
+  font-size: 1.2rem;
+  border: 1px solid var(--table-border-color);
+  border-top: 0;
+  border-left: 0;
 }
 
-table td:only-child, table th:only-child {
-    background-color: rgb(242, 242, 242);
-    background-position:0 0, 100% 0;
-    background-size:2px 100%, 2px 100%;
-    background-repeat:no-repeat, no-repeat;
+table td:first-child,
+table th:first-child {
+  padding-left: 0;
+  background-color: var(--background-color);
+  background-size: 2px 100%;
+  background-repeat: no-repeat;
+}
+
+table td:last-child,
+table th:last-child {
+  padding-right: 0;
+  border-right: 0;
+  background-color: var(--background-color);
+  background-position: 100% 0;
+  background-size: 2px 100%;
+  background-repeat: no-repeat;
+}
+
+table td:only-child,
+table th:only-child {
+  background-color: var(--background-color);
+  background-position: 0 0, 100% 0;
+  background-size: 2px 100%, 2px 100%;
+  background-repeat: no-repeat, no-repeat;
 }
 
 table th {
-    line-height:1.2;
+  line-height: 1.2;
 }
+
+/* FILTER + TAGS SYSTEM FOR NOTES */
 
 .container {
   overflow: hidden;
@@ -285,32 +265,46 @@ table th {
   display: none; /* Hidden by default */
 }
 
-/* The "show" class is added to the filtered elements */
 .show {
-  display: block;
+  display: block; /* The "show" class is added to the filtered elements */
 }
 
-/* Style the buttons */
 .btn {
-  font-family: 'printveticaregular';
-  color: rgb(35, 35, 35);
-  font-size: 0.77rem;
+  font-family: "printveticaregular";
+  color: var(--text-color);
+  font-size: 0.95rem;
   margin-right: 0.5em;
   border: none;
   outline: none;
   padding: 8px 10px;
   border-radius: 25px;
-  background-color: #e1e1e1;
-  cursor: poTimes New Roman;
-}
-
-/* Add a light grey background on mouse-over */
-.btn:hover {
-  background-color: rgb(206, 206, 206);
+  background-color: var(--button-color);
   cursor: pointer;
 }
 
+.btn:hover {
+  background-color: var(--button-hover-color);
+}
+
 .btn.active {
-  background-color: rgb(101, 101, 101);
-  color: rgb(242, 242, 242);
+  background-color: var(--button-active-color);
+  color: var(--background-color);
+}
+
+/* FONTS */
+
+@font-face {
+  font-family: "printveticaregular";
+  src: url("./fonts/printvetica-webfont.woff2") format("woff2"),
+    url("./fonts/printvetica-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Adobe Caslon Pro";
+  src: url("./fonts/ACaslonPro-Regular.woff2") format("woff2"),
+    url("./fonts/ACaslonPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
