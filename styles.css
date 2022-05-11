@@ -113,7 +113,6 @@
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  place-items: center;
   background-color: var(--button-color);
 }
 
