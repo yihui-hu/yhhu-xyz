@@ -101,7 +101,7 @@
 }
 
 * {
-  transition: background-color 0.1s ease, color 0.1s ease, border 0.1s ease, background 0.1s ease
+  transition: background-color 0.1s ease, color 0.1s ease, border 0.1s ease, background 0.1s ease,
               text-color 0.1s ease;
 }
 
@@ -285,6 +285,7 @@ table {
 
 table caption {
   font-size: 1.2rem;
+  color: var(--text-color);
   background-color: var(--background-color);
 }
 
@@ -294,6 +295,7 @@ table th {
   vertical-align: top;
   font-family: "Times New Roman", "Times New Roman", Times, serif;
   font-size: 1.2rem;
+  color: var(--text-color);
   border: 1px solid var(--table-border-color);
   border-top: 0;
   border-left: 0;
@@ -303,6 +305,7 @@ table td:first-child,
 table th:first-child {
   padding-left: 0;
   background-color: var(--background-color);
+  color: var(--text-color);
   background-size: 2px 100%;
   background-repeat: no-repeat;
 }
@@ -312,6 +315,7 @@ table th:last-child {
   padding-right: 0;
   border-right: 0;
   background-color: var(--background-color);
+  color: var(--text-color);
   background-position: 100% 0;
   background-size: 2px 100%;
   background-repeat: no-repeat;
@@ -320,6 +324,7 @@ table th:last-child {
 table td:only-child,
 table th:only-child {
   background-color: var(--background-color);
+  color: var(--text-color);
   background-position: 0 0, 100% 0;
   background-size: 2px 100%, 2px 100%;
   background-repeat: no-repeat, no-repeat;
