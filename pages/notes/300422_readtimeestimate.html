@@ -1,56 +1,142 @@
 <!DOCTYPE html>
 <html class="centered" lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>read time estimate</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="../../styles.css">
-    </head>
-    <body class="copy" id="article">
-        <div class="container">
-            <div class="header">
-                read time estimate
-                <button style="float: right" class="theme">✷&#xFE0E;</button>
-                <br>
-                <span class="readtime" id="time"></span>
-                <span class="readtime">&nbsp;&nbsp;•&nbsp;&nbsp;30/04/22</span>
-            </div>
 
-            <p>
-            In the interest of learning new things, I decided to work on implementing a reading time estimate to my notes. 
-            </p>
+<head>
+    <meta charset="utf-8">
+    <title>read time estimate</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles.css">
+    <script>
+        if (theme === "dark") {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            sessionStorage.setItem('theme', 'dark');
+            document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+        } else if (theme === "light") {
+            document.documentElement.setAttribute('data-theme', 'light');
+            sessionStorage.setItem('theme', 'light');
+            document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+        }
+    </script>
+</head>
 
-            <p>
-            After some expertly executed and strenuous google searching, I found a javascript snippet on the first page of results that does just that and modified it slightly, adding comments that might be helpful for future reference: 
-            </p>
-
-            <p>
-            <img class="normal" src="../../images/timeestimate.png" alt="time estimate .js snippet">
-            </p>
-
-            <p>
-            Also, since the total word count was already stored in a variable, I decided to surface that number and have it exist alongside the reading time estimate<sup id="footnote1"><a class="footnote" href="#footnote-1">1</a></sup>. Might as well. 
-            </p>
-
-            <p>
-            I'm interested in experimenting with more javascript. How I understand it as of right now is that it is an easy way of embedding functions into websites and making them more dynamic/interactive. 
-            </p>
-
-            <p>
-            Small implementation note: I stored the .js file in a separate folder, and used &lt;script&gt;&lt;/script&gt; to call them in the html files. This means I could probably have a bunch of separate .js files for each function I want to use, and call them when needed... very useful
-            </p>
-
-            <hr style="margin-top: 2em;margin-bottom: 1em;">
-
-            <p id="footnote-1">
-                1. I have since removed this word count because it serves no real purpose other than taking up space, or revealing how bad I am at long-form content (re: my inability to produce anything meaningful in that space). <a class="inline" href="#footnote1">↩&#xFE0E;</a>
-            </p>
-
-            <p></p>
-            <a class = "main" href = "../notes.html">⚛&#xFE0E; return to notes</a>
-            <a class = "main" href = "../../index.html">⁖ return to main</a>
+<body class="copy" id="article">
+    <div class="container">
+        <div class="header">
+            read time estimate
+            <button class="theme" style="float: right" id="theme-toggle" onclick="modeSwitcher()"></a>
+            <br>
+            <span class="readtime" id="time"></span>
+            <span class="readtime">&nbsp;&nbsp;•&nbsp;&nbsp;30/04/22</span>
         </div>
-        <script src="../../js/readTimeEstimate.js"></script>
-        <script src="../../js/lightdark.js"></script>
-    </body>
+
+        <p>
+            In the interest of learning new things, I decided to work on implementing a reading time estimate to my
+            notes.
+        </p>
+
+        <p>
+            After some expertly executed and strenuous google searching, I found a javascript snippet on the first page
+            of results that does just that and modified it slightly, adding comments that might be helpful for future
+            reference:
+        </p>
+
+        <p>
+            <img class="normal" src="../../images/timeestimate.png" alt="time estimate .js snippet">
+        </p>
+
+        <p>
+            Also, since the total word count was already stored in a variable, I decided to surface that number and have
+            it exist alongside the reading time estimate<sup id="footnote1"><a class="footnote"
+                    href="#footnote-1">1</a></sup>. Might as well.
+        </p>
+
+        <p>
+            I'm interested in experimenting with more javascript. How I understand it as of right now is that it is an
+            easy way of embedding functions into websites and making them more dynamic/interactive.
+        </p>
+
+        <p>
+            Small implementation note: I stored the .js file in a separate folder, and used
+            &lt;script&gt;&lt;/script&gt; to call them in the html files. This means I could probably have a bunch of
+            separate .js files for each function I want to use, and call them when needed... very useful
+        </p>
+
+        <hr style="margin-top: 2em;margin-bottom: 1em;">
+
+        <p id="footnote-1">
+            1. I have since removed this word count because it serves no real purpose other than taking up space, or
+            revealing how bad I am at long-form content (re: my inability to produce anything meaningful in that space).
+            <a class="inline" href="#footnote1">↩&#xFE0E;</a>
+        </p>
+
+        <p></p>
+        <a class="main" href="../notes.html">⚛&#xFE0E; return to notes</a>
+        <a class="main" href="../../index.html">⁖ return to main</a>
+    </div>
+    <script src="../../js/readTimeEstimate.js"></script>
+    <script>
+        // this checks whether system dark mode is set 
+        let systemInitiatedDark = window.matchMedia("(prefers-color-scheme: dark)");
+        // this checks for session storage telling to override
+        // the system preferences 
+        let theme = sessionStorage.getItem('theme');
+
+        if (systemInitiatedDark.matches) {
+            document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+        } else {
+            document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+        }
+
+        function prefersColorTest(systemInitiatedDark) {
+            if (systemInitiatedDark.matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+                // this clears the session storage 
+                sessionStorage.setItem('theme', '');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+                sessionStorage.setItem('theme', '');
+            }
+        }
+        systemInitiatedDark.addListener(prefersColorTest);
+
+        function modeSwitcher() {
+            // it’s important to check for overrides again 
+            let theme = sessionStorage.getItem('theme');
+            // checks if reader selected dark mode 
+            if (theme === "dark") {
+                document.documentElement.setAttribute('data-theme', 'light');
+                sessionStorage.setItem('theme', 'light');
+                document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+                // checks if reader selected light mode 
+            } else if (theme === "light") {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                sessionStorage.setItem('theme', 'dark');
+                document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+                // checks if system set dark mode 
+            } else if (systemInitiatedDark.matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+                sessionStorage.setItem('theme', 'light');
+                document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+                // the only option left is system set light mode
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                sessionStorage.setItem('theme', 'dark');
+                document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+            }
+        }
+
+        if (theme === "dark") {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            sessionStorage.setItem('theme', 'dark');
+            document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+        } else if (theme === "light") {
+            document.documentElement.setAttribute('data-theme', 'light');
+            sessionStorage.setItem('theme', 'light');
+            document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+        }
+    </script>
+</body>
+
 </html>

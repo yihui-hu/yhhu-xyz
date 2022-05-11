@@ -1,56 +1,132 @@
 <!DOCTYPE html>
 <html class="centered" lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>hash tables</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="../../styles.css">
-    </head>
-    <body class="copy" id="article">
-        <div class="container">
-            <div class="header">
-                hash tables
-                <button style="float: right" class="theme">✷&#xFE0E;</button>
-                <br>
-                <span class="readtime" id="time"></span>
-                <span class="readtime">&nbsp;&nbsp;•&nbsp;&nbsp;25/04/22</span>
-            </div>
-            
-            <p>Just wrapped up my final spring sem CS project: a pared down adaptation
-                of the unix grep program. It utilises hash tables to index all the files
-                in a specified directory, and then allows users to perform searches for specific strings
-                (i.e. words) within said directory.
-            </p>
 
-            <p>Hash tables are data structures that allow for fast lookup of data, and the one that
-                my partner and I chose to implement in our project utilises a simple array and the built-in
-                C++ hash function. The hash function takes in a string and returns an integer, which represents
-                that word's index in the array. So when a user goes to search for that same string, it returns the
-                same index; when we access that index in the hash table, we get back the same word.
-            </p>
-            
-            <img class="normal" src="../../images/hashtable_sample.png" alt="hash table sample">
+<head>
+    <meta charset="utf-8">
+    <title>hash tables</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles.css">
+    <script>
+        if (theme === "dark") {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            sessionStorage.setItem('theme', 'dark');
+            document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+        } else if (theme === "light") {
+            document.documentElement.setAttribute('data-theme', 'light');
+            sessionStorage.setItem('theme', 'light');
+            document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+        }
+    </script>
+</head>
 
-            <p>To make it work more like grep, we store not only the string but also other useful information
-                in the hash table (using a struct), like its file name, line number, and the line itself. So
-                when the user searches for a string, they will get back not only the word but also other info.
-            </p>
-
-            <p>But what if there are collisions (i.e. two unique words, when passed into the hash function, return
-                the same index)? Turns out we can handle those using one of two approaches: chaining, or linear probing.
-                Chaining simply entails storing the two words in the same index using an array/linked list, while linear
-                probing entails searching for the next available/empty spot in the array. 
-            </p>
-
-            <p>Of course, many of the nitty-gritty implementation details are left out, but for a quick general overview
-                of how hash tables work, I think this will do (for now).
-            </p>
-            
-            <p></p>
-            <a class="main" href="../notes.html">⚛&#xFE0E; return to notes</a>
-            <a class="main" href="../../index.html">⁖ return to main</a>
+<body class="copy" id="article">
+    <div class="container">
+        <div class="header">
+            hash tables
+            <button class="theme" style="float: right" id="theme-toggle" onclick="modeSwitcher()"></a>
+            <br>
+            <span class="readtime" id="time"></span>
+            <span class="readtime">&nbsp;&nbsp;•&nbsp;&nbsp;25/04/22</span>
         </div>
-        <script src="../../js/readTimeEstimate.js"></script>
-        <script src="../../js/lightdark.js"></script>
-    </body>
+
+        <p>Just wrapped up my final spring sem CS project: a pared down adaptation
+            of the unix grep program. It utilises hash tables to index all the files
+            in a specified directory, and then allows users to perform searches for specific strings
+            (i.e. words) within said directory.
+        </p>
+
+        <p>Hash tables are data structures that allow for fast lookup of data, and the one that
+            my partner and I chose to implement in our project utilises a simple array and the built-in
+            C++ hash function. The hash function takes in a string and returns an integer, which represents
+            that word's index in the array. So when a user goes to search for that same string, it returns the
+            same index; when we access that index in the hash table, we get back the same word.
+        </p>
+
+        <img class="normal" src="../../images/hashtable_sample.png" alt="hash table sample">
+
+        <p>To make it work more like grep, we store not only the string but also other useful information
+            in the hash table (using a struct), like its file name, line number, and the line itself. So
+            when the user searches for a string, they will get back not only the word but also other info.
+        </p>
+
+        <p>But what if there are collisions (i.e. two unique words, when passed into the hash function, return
+            the same index)? Turns out we can handle those using one of two approaches: chaining, or linear probing.
+            Chaining simply entails storing the two words in the same index using an array/linked list, while linear
+            probing entails searching for the next available/empty spot in the array.
+        </p>
+
+        <p>Of course, many of the nitty-gritty implementation details are left out, but for a quick general overview
+            of how hash tables work, I think this will do (for now).
+        </p>
+
+        <p></p>
+        <a class="main" href="../notes.html">⚛&#xFE0E; return to notes</a>
+        <a class="main" href="../../index.html">⁖ return to main</a>
+    </div>
+    <script src="../../js/readTimeEstimate.js"></script>
+    <script>
+        // this checks whether system dark mode is set 
+        let systemInitiatedDark = window.matchMedia("(prefers-color-scheme: dark)");
+        // this checks for session storage telling to override
+        // the system preferences 
+        let theme = sessionStorage.getItem('theme');
+
+        if (systemInitiatedDark.matches) {
+            document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+        } else {
+            document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+        }
+
+        function prefersColorTest(systemInitiatedDark) {
+            if (systemInitiatedDark.matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+                // this clears the session storage 
+                sessionStorage.setItem('theme', '');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+                sessionStorage.setItem('theme', '');
+            }
+        }
+        systemInitiatedDark.addListener(prefersColorTest);
+
+        function modeSwitcher() {
+            // it’s important to check for overrides again 
+            let theme = sessionStorage.getItem('theme');
+            // checks if reader selected dark mode 
+            if (theme === "dark") {
+                document.documentElement.setAttribute('data-theme', 'light');
+                sessionStorage.setItem('theme', 'light');
+                document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+                // checks if reader selected light mode 
+            } else if (theme === "light") {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                sessionStorage.setItem('theme', 'dark');
+                document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+                // checks if system set dark mode 
+            } else if (systemInitiatedDark.matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+                sessionStorage.setItem('theme', 'light');
+                document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+                // the only option left is system set light mode
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                sessionStorage.setItem('theme', 'dark');
+                document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+            }
+        }
+
+        if (theme === "dark") {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            sessionStorage.setItem('theme', 'dark');
+            document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+        } else if (theme === "light") {
+            document.documentElement.setAttribute('data-theme', 'light');
+            sessionStorage.setItem('theme', 'light');
+            document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+        }
+    </script>
+</body>
+
 </html>

@@ -1,74 +1,166 @@
 <!DOCTYPE html>
 <html class="centered" lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>text to html</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="../../styles.css">
-    </head>
-    <body class="copy" id="article">
-        <div class="container">
-            <div class="header">
-                text to html
-                <button style="float: right" class="theme">✷&#xFE0E;</button>
-                <br>
-                <span class="readtime" id="time"></span>
-                <span class="readtime">&nbsp;&nbsp;•&nbsp;&nbsp;28/04/22</span>
-            </div>
-            
-            <p>
-            I have been manually writing/hard-coding all the content on this website in HTML files: the images, gifs, tables, even the notes that you're reading right now. And that means having to conform to the HTML syntax whenever I want to add a new piece of content.
-            </p>
-                
-            <p>
-            That's fine for single images or short paragraphs, but for longer-form writing it's kind of a pain to have to enclose every paragraph in &lt;p&gt; and &lt;/p&gt; and format everything correctly. Plus, writing directly in the HTML file itself, cluttered with the boilerplate, is not great.
-            </p>
-                
-            <p>
-            I found out that there are websites that take Markdown or plain text files and convert them into HTML code. But I thought that such a functionality should be so simple that I could program it with what little coding experience I have.
-            </p>
-                
-            <p>
-            So this is what I created &#x279E;<a class="inline" href="https://github.com/yihui-hu/TextToHTML" target="_blank"> TextToHTML</a></p>
-            
-            <p>
-            It is a super simple program that processes a plain .txt file into HTML code that can be copied and pasted into any existing HTML file. It should make the process of writing notes on my website slightly easier. Though it doesn't have any features other than parsing plain text. (I'll still have to create tables and embed links manually, unless I figure out a nifty trick to make my program handle those as well. I have some ideas, and hopefully I can get to work on them soon-ish. Maybe after finals.)
-            </p>
-            
-            <img class="normal" src="../../images/texttohtml_sample.png" alt="text to html sample">
-            <figcaption>TextToHTML v0.11</figcaption>
-                
-            <p>
-            P.S. I wrote this note in a plain text file and converted it to a HTML snippet using my program. Is this what it feels like to make your own tools for carving a sculpture, or hand-making your own noodles for a dish?
-            </p>
 
-            <div class="header">
-                small-changelog
-            </div>
-            <p></p>
+<head>
+    <meta charset="utf-8">
+    <title>text to html</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles.css">
+    <script>
+        if (theme === "dark") {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            sessionStorage.setItem('theme', 'dark');
+            document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+        } else if (theme === "light") {
+            document.documentElement.setAttribute('data-theme', 'light');
+            sessionStorage.setItem('theme', 'light');
+            document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+        }
+    </script>
+</head>
 
-            <table>
-                <tr>
-                    <td>v0.12</td>
-                    <td>Program now appends table item template to the HTML snippet (to be copy-pased into the notes page).</td>
-                </tr>
-
-                <tr>
-                    <td>v0.11</td>
-                    <td>Added functionality to embed a link or image template in the HTML snippet using a &lt;link&gt; or &lt;image&gt; flag.</td>
-                </tr>
-
-                <tr>
-                    <td>v0.10</td>
-                    <td>The program now also encapsulates the HTML snippet in the boilerplate specific to my website. One less thing to copy-paste.</td>
-                </tr>
-            </table>
-            
-            <p></p>
-            <a class="main" href="../notes.html">⚛&#xFE0E; return to notes</a>
-            <a class="main" href="../../index.html">⁖ return to main</a>
+<body class="copy" id="article">
+    <div class="container">
+        <div class="header">
+            text to html
+            <button class="theme" style="float: right" id="theme-toggle" onclick="modeSwitcher()"></a>
+            <br>
+            <span class="readtime" id="time"></span>
+            <span class="readtime">&nbsp;&nbsp;•&nbsp;&nbsp;28/04/22</span>
         </div>
-        <script src="../../js/readTimeEstimate.js"></script>
-        <script src="../../js/lightdark.js"></script>
-    </body>
+
+        <p>
+            I have been manually writing/hard-coding all the content on this website in HTML files: the images, gifs,
+            tables, even the notes that you're reading right now. And that means having to conform to the HTML syntax
+            whenever I want to add a new piece of content.
+        </p>
+
+        <p>
+            That's fine for single images or short paragraphs, but for longer-form writing it's kind of a pain to have
+            to enclose every paragraph in &lt;p&gt; and &lt;/p&gt; and format everything correctly. Plus, writing
+            directly in the HTML file itself, cluttered with the boilerplate, is not great.
+        </p>
+
+        <p>
+            I found out that there are websites that take Markdown or plain text files and convert them into HTML code.
+            But I thought that such a functionality should be so simple that I could program it with what little coding
+            experience I have.
+        </p>
+
+        <p>
+            So this is what I created &#x279E;<a class="inline" href="https://github.com/yihui-hu/TextToHTML"
+                target="_blank"> TextToHTML</a></p>
+
+        <p>
+            It is a super simple program that processes a plain .txt file into HTML code that can be copied and pasted
+            into any existing HTML file. It should make the process of writing notes on my website slightly easier.
+            Though it doesn't have any features other than parsing plain text. (I'll still have to create tables and
+            embed links manually, unless I figure out a nifty trick to make my program handle those as well. I have some
+            ideas, and hopefully I can get to work on them soon-ish. Maybe after finals.)
+        </p>
+
+        <img class="normal" src="../../images/texttohtml_sample.png" alt="text to html sample">
+        <figcaption>TextToHTML v0.11</figcaption>
+
+        <p>
+            P.S. I wrote this note in a plain text file and converted it to a HTML snippet using my program. Is this
+            what it feels like to make your own tools for carving a sculpture, or hand-making your own noodles for a
+            dish?
+        </p>
+
+        <div class="header">
+            small-changelog
+        </div>
+        <p></p>
+
+        <table>
+            <tr>
+                <td>v0.12</td>
+                <td>Program now appends table item template to the HTML snippet (to be copy-pased into the notes page).
+                </td>
+            </tr>
+
+            <tr>
+                <td>v0.11</td>
+                <td>Added functionality to embed a link or image template in the HTML snippet using a &lt;link&gt; or
+                    &lt;image&gt; flag.</td>
+            </tr>
+
+            <tr>
+                <td>v0.10</td>
+                <td>The program now also encapsulates the HTML snippet in the boilerplate specific to my website. One
+                    less thing to copy-paste.</td>
+            </tr>
+        </table>
+
+        <p></p>
+        <a class="main" href="../notes.html">⚛&#xFE0E; return to notes</a>
+        <a class="main" href="../../index.html">⁖ return to main</a>
+    </div>
+    <script src="../../js/readTimeEstimate.js"></script>
+    <script>
+        // this checks whether system dark mode is set 
+        let systemInitiatedDark = window.matchMedia("(prefers-color-scheme: dark)");
+        // this checks for session storage telling to override
+        // the system preferences 
+        let theme = sessionStorage.getItem('theme');
+
+        if (systemInitiatedDark.matches) {
+            document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+        } else {
+            document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+        }
+
+        function prefersColorTest(systemInitiatedDark) {
+            if (systemInitiatedDark.matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+                // this clears the session storage 
+                sessionStorage.setItem('theme', '');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+                sessionStorage.setItem('theme', '');
+            }
+        }
+        systemInitiatedDark.addListener(prefersColorTest);
+
+        function modeSwitcher() {
+            // it’s important to check for overrides again 
+            let theme = sessionStorage.getItem('theme');
+            // checks if reader selected dark mode 
+            if (theme === "dark") {
+                document.documentElement.setAttribute('data-theme', 'light');
+                sessionStorage.setItem('theme', 'light');
+                document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+                // checks if reader selected light mode 
+            } else if (theme === "light") {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                sessionStorage.setItem('theme', 'dark');
+                document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+                // checks if system set dark mode 
+            } else if (systemInitiatedDark.matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+                sessionStorage.setItem('theme', 'light');
+                document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+                // the only option left is system set light mode
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                sessionStorage.setItem('theme', 'dark');
+                document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+            }
+        }
+
+        if (theme === "dark") {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            sessionStorage.setItem('theme', 'dark');
+            document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+        } else if (theme === "light") {
+            document.documentElement.setAttribute('data-theme', 'light');
+            sessionStorage.setItem('theme', 'light');
+            document.getElementById("theme-toggle").innerHTML = "✶&#xFE0E;";
+        }
+    </script>
+</body>
+
 </html>
