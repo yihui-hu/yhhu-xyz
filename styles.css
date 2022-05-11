@@ -105,7 +105,6 @@
 }
 
 .theme {
-  font-family: 'Times New Roman';
   font-size: 2vh;
   color: var(--text-color);
   background-color: var(--background-color);
@@ -113,7 +112,8 @@
   border: none;
   width: 35px;
   height: 35px;
-  border-radius: 25px;
+  border-radius: 50%;
+  place-items: center;
   background-color: var(--button-color);
 }
 

@@ -12,7 +12,7 @@ function loadTheme(theme) {
   if (theme === 'light') {
     themeBtn.innerHTML = `☼&#xFE0E;`;
   } else {
-    themeBtn.innerHTML = `☾&#xFE0E;`;
+    themeBtn.innerHTML = `☆&#xFE0E;`;
   }
   root.setAttribute('color-scheme', `${theme}`);
 }
