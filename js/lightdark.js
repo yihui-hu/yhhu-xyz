@@ -9,11 +9,6 @@ function getCurrentTheme() {
 
 function loadTheme(theme) {
   const root = document.querySelector(':root');
-  if (theme === 'light') {
-    themeBtn.innerHTML = '☀&#xFE0E;';
-  } else {
-    themeBtn.innerHTML = '✷&#xFE0E;';
-  }
   root.setAttribute('color-scheme', `${theme}`);
 }
 

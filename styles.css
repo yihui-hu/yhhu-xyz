@@ -105,21 +105,13 @@
 }
 
 .theme {
-  font-size: 2vh;
+  font-size: 17px;
   color: var(--text-color);
   cursor: pointer;
   border: none;
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background-color: var(--button-color);
-}
-
-.theme:hover {
-  background-color: var(--button-hover-color);
-}
-
-.theme:active {
   background-color: var(--button-color);
 }
 
