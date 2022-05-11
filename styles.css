@@ -24,7 +24,7 @@
   --hover-color-dark: rgb(82, 94, 128);
   --link-color-dark: #989fc1;
   --img-border-color-dark: #b6bfcf;
-  --button-color-dark:  rgb(82, 94, 128);
+  --button-color-dark:  rgb(50, 58, 84);
   --button-hover-color-dark: rgb(127, 136, 162);
   --button-active-color-dark: #b6bfcf;
   --table-border-color-dark: rgb(82, 94, 128);
@@ -41,7 +41,7 @@
     --hover-color: var(--hover-color-dark);
     --link-color: var(--link-color-dark);
     --img-border-color: var(--img-border-color-dark);
-    --button-color:  var(--buton-color-dark);
+    --button-color:  var(--button-color-dark);
     --button-hover-color: var(--button-hover-color-dark);
     --button-active-color: var(--button-active-color-dark);
     --table-border-color: var(--table-border-color-dark);
@@ -59,7 +59,7 @@
     --hover-color: var(--hover-color-light);
     --link-color: var(--link-color-light);
     --img-border-color: var(--img-border-color-light);
-    --button-color:  var(--buton-color-light);
+    --button-color:  var(--button-color-light);
     --button-hover-color: var(--button-hover-color-light);
     --button-active-color: var(--button-active-color-light);
     --table-border-color: var(--table-border-color-light);
