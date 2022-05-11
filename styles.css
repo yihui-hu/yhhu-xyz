@@ -1,46 +1,77 @@
 /* LIGHT / DARK MODE */
 
 :root {
-  --background-color: rgb(242, 242, 242);
-  --text-color: rgba(0, 0, 0, 0.9);
-  --header-color: rgb(168, 168, 168);
-  --index-header-color: rgb(50, 50, 50);
-  --hover-color: rgb(152, 166, 209);
-  --link-color: rgb(9, 57, 202);
-  --img-border-color: rgb(222, 222, 222);
-  --button-color: #e1e1e1;
-  --button-hover-color: rgb(206, 206, 206);
-  --button-active-color: rgb(101, 101, 101);
-  --table-border-color: #dddddd;
-  --image-opacity: 100%;
-  --background-img: url("./images/indexbggrey.png");
+  scroll-behavior: smooth;
+  
+  --background-color-light: rgb(242, 242, 242);
+  --text-color-light: rgba(0, 0, 0, 0.9);
+  --header-color-light: rgb(168, 168, 168);
+  --index-header-color-light: rgb(50, 50, 50);
+  --hover-color-light: rgb(152, 166, 209);
+  --link-color-light: rgb(9, 57, 202);
+  --img-border-color-light: rgb(222, 222, 222);
+  --button-color-light: #e1e1e1;
+  --button-hover-color-light: rgb(206, 206, 206);
+  --button-active-color-light: rgb(101, 101, 101);
+  --table-border-color-light: #dddddd;
+  --image-opacity-light: 100%;
+  --background-img-light: url("./images/indexbggrey.png");
+
+  --background-color-dark:#061627;
+  --text-color-dark: #b6bfcf;
+  --header-color-dark: #b6bfcfa9;
+  --index-header-color-dark: #b6bfcf;
+  --hover-color-dark: rgb(82, 94, 128);
+  --link-color-dark: #989fc1;
+  --img-border-color-dark: #b6bfcf;
+  --button-color-dark:  rgb(82, 94, 128);
+  --button-hover-color-dark: rgb(127, 136, 162);
+  --button-active-color-dark: #b6bfcf;
+  --table-border-color-dark: rgb(82, 94, 128);
+  --image-opacity-dark: 85%;
+  --background-img-dark: url("./images/indexbgdark.png");
 }
 
-[data-theme="dark"] {
-  --background-color:#061627;
-  --text-color: #b6bfcf;
-  --header-color: #b6bfcfa9;
-  --index-header-color: #b6bfcf;
-  --hover-color: rgb(82, 94, 128);
-  --link-color: #989fc1;
-  --img-border-color: #b6bfcf;
-  --button-color:  rgb(82, 94, 128);
-  --button-hover-color: rgb(127, 136, 162);
-  --button-active-color: #b6bfcf;
-  --table-border-color: rgb(82, 94, 128);
-  --image-opacity: 85%;
-  --background-img: url("./images/indexbgdark.png");
+[color-scheme="light"] {
+  --background-color: var(--background-color-light);
+  --text-color: var(--text-color-light);
+  --header-color: var(--header-color-light);
+  --index-header-color: var(--index-header-color-light);
+  --hover-color: var(--hover-color-light);
+  --link-color: var(--link-color-light);
+  --img-border-color: var(--img-border-color-light);
+  --button-color:  var(--buton-color-light);
+  --button-hover-color: var(--button-hover-color-light);
+  --button-active-color: var(--button-active-color-light);
+  --table-border-color: var(--table-border-color-light);
+  --image-opacity: var(--image-opacity-light);
+  --background-img: var(--background-img-light);
+}
+
+[color-scheme="dark"] {
+  --background-color: var(--background-color-dark);
+  --text-color: var(--text-color-dark);
+  --header-color: var(--header-color-dark);
+  --index-header-color: var(--index-header-color-dark);
+  --hover-color: var(--hover-color-dark);
+  --link-color: var(--link-color-dark);
+  --img-border-color: var(--img-border-color-dark);
+  --button-color:  var(--buton-color-dark);
+  --button-hover-color: var(--button-hover-color-dark);
+  --button-active-color: var(--button-active-color-dark);
+  --table-border-color: var(--table-border-color-dark);
+  --image-opacity: var(--image-opacity-dark);
+  --background-img: var(--background-img-dark);
 }
 
 * {
   transition: background-color 0.1s ease, color 0.1s ease, background 0.1s ease;
 }
 
-.switcher {
+.theme {
   border: none;
   font-family: 'Times New Roman';
-  font-size: 1.8vh;
-  border-radius: 25px;
+  font-size: 2vh;
   color: var(--text-color);
   background-color: var(--background-color);
   cursor: pointer;
