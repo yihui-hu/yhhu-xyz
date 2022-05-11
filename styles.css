@@ -104,15 +104,19 @@
   transition: background-color 0.1s ease, color 0.1s ease, border 0.1s ease, background 0.1s ease;
 }
 
-.theme {
-  font-size: 17px;
+button.theme {
+  font-size: 2vh;
   color: var(--text-color);
   cursor: pointer;
   border: none;
   width: 35px;
   height: 35px;
-  border-radius: 50%;
+  border-radius: 25px;
   background-color: var(--button-color);
+}
+
+button.theme:hover {
+  background-color: var(--button-hover-color);
 }
 
 /* FOR INDEX.HTML */
@@ -252,8 +256,8 @@ img.grayscale {
 
 img.border {
   /* for images with blended in backgrounds */
-  /* max-width: 99%;
-  border: 1.5px solid var(--img-border-color); */
+  max-width: 100%;
+  /* border: 1.5px solid var(--img-border-color); */
 }
 
 figcaption {
@@ -338,11 +342,11 @@ table th {
   display: block; /* The "show" class is added to the filtered elements */
 }
 
-.btn {
+button.btn {
   font-family: "printveticaregular";
   color: var(--text-color);
   font-size: 0.95rem;
-  margin-right: 0.5em;
+  margin-right: 0.5rem;
   border: none;
   outline: none;
   padding: 8px 10px;
@@ -351,11 +355,11 @@ table th {
   cursor: pointer;
 }
 
-.btn:hover {
+button.btn:hover {
   background-color: var(--button-hover-color);
 }
 
-.btn.active {
+button.btn.active {
   background-color: var(--button-active-color);
   color: var(--background-color);
 }
