@@ -102,7 +102,7 @@
 
 * {
   transition: background-color 0.1s ease, color 0.1s ease, border 0.1s ease, background 0.1s ease
-              text-color: 0.1s ease;
+              text-color 0.1s ease;
 }
 
 button.theme {
