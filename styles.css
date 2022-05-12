@@ -121,7 +121,7 @@ p.indexcopy {
   line-height: 50%;
   margin-top: 0%;
   margin-bottom: 2.5em;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
 }
 
 a.index {
@@ -129,7 +129,7 @@ a.index {
   color: var(--text-color);
   font-family: "Adobe Caslon Pro", "Times New Roman", Times, serif;
   line-height: 50%;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
 }
 
 /* HTML STYLING */
@@ -336,6 +336,15 @@ button.btn:hover {
 button.btn.active {
   background-color: var(--button-active-color);
   color: var(--background-color);
+}
+
+/* footer */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 /* FONTS */
