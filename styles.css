@@ -110,25 +110,26 @@ p.index {
   color: var(--header-color);
   font-family: "printveticaregular", Helvetica, Arial;
   font-style: bold;
-  font-size: 2vh;
+  font-size: 1.05rem;
 }
 
 p.indexcopy {
+  /* index copy */
   font-family: "Adobe Caslon Pro", "Times New Roman", Times, serif;
   letter-spacing: 0.1px;
   color: var(--text-color);
   line-height: 50%;
   margin-top: 0%;
   margin-bottom: 2.5em;
-  font-size: 2.7vh;
+  font-size: 1.4rem;
 }
 
 a.index {
-  /* index.html header links */
+  /* index works/notes links */
   color: var(--text-color);
   font-family: "Adobe Caslon Pro", "Times New Roman", Times, serif;
   line-height: 50%;
-  font-size: 2.7vh;
+  font-size: 1.4rem;
 }
 
 /* HTML STYLING */
@@ -138,7 +139,7 @@ html {
   background-color: var(--background-color);
 }
 
-.centered {
+html.centered {
   max-width: 65ch;
   margin: auto;
   padding: 3vw;
@@ -233,6 +234,7 @@ figcaption {
 }
 
 /* TABLE STYLING from awsm.css*/
+
 table {
   display: inline-block;
   border-spacing: 0;
