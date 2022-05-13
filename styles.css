@@ -115,7 +115,7 @@ p.index {
 
 p.indexcopy {
   /* index copy */
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Adobe Caslon Pro", "Times New Roman", Times, serif;
   letter-spacing: 0.1px;
   color: var(--text-color);
   line-height: 50%;
@@ -127,7 +127,7 @@ p.indexcopy {
 a.index {
   /* index works/notes links */
   color: var(--text-color);
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Adobe Caslon Pro", "Times New Roman", Times, serif;
   line-height: 50%;
   font-size: 1.35rem;
 }
