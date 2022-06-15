@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="centered" lang="en" style="max-width: 100ch;" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>todo-today</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="copy" id="article">
+    <div class="container">
+        <div class="header">
+            todo-today
+            <!-- <button class="theme" style="float: right" id="theme-toggle" onclick="modeSwitcher()"></a> -->
+            <br>
+            <span class="readtime" id="time"></span>
+            <span class="readtime">&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;15/06/22</span>
+        </div>
+
+        <p>
+            (I have been busy enjoying my summer, so this post comes quite late relative to the project(s) contained
+            within. Below is a (mostly) chronological log of the work I've done thus far.)
+        </p>
+
+        <p>
+            May 20 2022:
+            <br>
+            I realised that I'm not very good at naming my projects as you can probably tell. Anyway I digress; I've
+            been making some good progress on the todo "app" (I'm not sure it qualifies as one but let's call it that
+            for now) which I briefly mentioned in my previous post.
+        </p>
+
+        <img class="normal" src="../../images/todo-today-v1.png" alt="todo-today">
+        <figcaption>On hindsight, not a great shade of yellow/beige</figcaption>
+        <p style="margin-top: 2vh"></p>
+
+        <p>
+            Most of what you see is placeholder content, but at least I've got the layout down for now.
+        </p>
+
+        <p>
+            Also, I guess I never learn--even after an absolutely tragic attempt at implementing light/dark mode for my
+            personal website, I still went and tried to implement simple custom themes for this app. But the scope of
+            this app is much smaller, so thankfully everything worked out in the end. I even managed to drastically
+            mitigate the flickering on reload, but that's likely in no small part due to the app only having two real
+            sections to switch between.
+        </p>
+
+        <p>
+            With how it's set up in the css file, it's no problem to add even more themes down the line (the hard part
+            is coming up with good colour schemes).
+        </p>
+
+        <img class="normal" src="../../images/todo-today-theme-code.png" alt="todo-today theme code snippet">
+        <figcaption>Structure of themes in the css file</figcaption>
+        <p style="margin-top: 2vh"></p>
+
+        <p>
+            That aside, the app is still not fully operational; here's a short list of what to
+            work on next:
+
+        <ul>
+            <li>
+                Using localStorage to save incomplete/completed tasks (pretty rudimentary but essential)
+            </li>
+            <li>
+                Ability to write notes on a separate 'notebook' (nice to have)
+            </li>
+            <li>
+                Categorisation of to-dos (if I can...)<sup id="footnote1"><a class="footnote"
+                        href="#footnote-1">1</a></sup>
+            </li>
+        </ul>
+        </p>
+
+        <p>
+            The UI right now also doesn't really accommodate for more than about 5 categories or notes. And it's pretty
+            much unusable on mobile. But let's just get it working properly right now.
+        </p>
+
+        <p>
+            At this juncture I'm also thinking about converting the web app into a desktop app using something like
+            Electron<sup id="footnote2"><a class="footnote" href="#footnote-2">2</a></sup>. It would be nice to design
+            an app icon for that too.
+        </p>
+
+        <img class="normal" src="../../images/todo-today-v2.png" alt="todo-today-v2">
+        <figcaption>A much better shade of yellow/beige</figcaption>
+        <p style="margin-top: 2vh"></p>
+
+        <p>
+            May 21 2022:
+        <ul>
+            <li>
+                Saving tasks with localStorage works now, still need to re-implement completion of tasks due to
+                refactoring of code
+            </li>
+            <li>
+                Implemented ability to rename tasks
+            </li>
+            <li>
+                Will also work on ability to delete incomplete/completed tasks
+            </li>
+        </ul>
+        </p>
+
+        <p>
+            May 21 2022 (late evening):
+        <ul>
+            <li>
+                Okay Why Is Everything Everywhere Breaking All At Once
+            </li>
+        </ul>
+        </p>
+
+        <p>
+            May 22 2022:
+        <ul>
+            <li>
+                I took a break from the code (may or may not have touched grass) and with some simple refactoring, the
+                code works again. Also implemented ability to delete tasks.
+            </li>
+        </ul>
+        </p>
+
+        <p>
+            I have decided that implementing javascript animations is too complex and unnecessary for the time being, so
+            I will redirect my focus to making a somewhat passable MVP, so that means working on a notes portion of the
+            app (which I initially set out to do).
+        </p>
+
+        <img class="normal" src="../../images/todo-today-v3.png" alt="todo-today-v3">
+        <figcaption>localStorage works, and so does deletion of todos</figcaption>
+        <p style="margin-top: 2vh"></p>
+
+        <p>
+            May 23 2022:
+            <ul>
+                <li>
+                    Managed to implement a notes section, code adapted from 
+                    <a class="inline" href="https://www.youtube.com/watch?v=Efo7nIUF2JY&ab_channel=dcode">here.</a>
+                </li>
+            </ul>
+        </p>
+
+        <img class="normal" src="../../images/todo-today-v4.png" alt="todo-today-v4">
+        <figcaption>You can delete a note by double-clicking on it</figcaption>
+        <p style="margin-top: 2vh"></p>
+
+        <p>
+            May 24 2022:
+            <br>
+            Launched the project using Netlify. Now live on <a class="inline" target="_blank" href="https://todo-today-simple.netlify.app">todo-today-simple.netlify.app</a>. Please don't visit it on mobile, it is very much broken there (my bad). This will do for now. At least it works, if somewhat clunkily.
+        </p>
+
+        <p>
+            As an aside, my favourite theme is "Wine":
+        </p>
+
+        <img class="normal" src="../../images/todo-today-wine.png" alt="todo-today-wine">
+        <p style="margin-top: 2vh"></p>
+
+        <p>
+            !!! BONUS !!!
+            <br>
+            My fingers were still itching so I decided to create another simple app, adapted from the 8 ball mini project from codecademy's basic javascript crash course:
+        </p>
+
+        <img class="normal" src="../../images/magic-8-ball-simple.png" alt="magic 8 ball app">
+        <figcaption>Ask your most burning questions</figcaption>
+        <p style="margin-top: 2vh"></p>
+
+        <p>
+            The code for this is particularly simple:
+        </p>
+
+        <img class="normal" src="../../images/magic-8-ball-simple-code.png" alt="magic 8 ball simple code">
+        <p style="margin-top: 2vh"></p>
+
+        <p>
+            Also live on <a class="inline" target="_blank" href="https://magic-8-ball-simple.netlify.app">magic-8-ball-simple.netlify.app</a>. It was relatively quick to put together. I think I'm getting warmed up to web programming! Next up, learning React. This might just be me learning to fly before walking but let's see how things go.
+        </p>
+
+        <hr style="margin-top: 2em;margin-bottom: 1em;">
+
+        <p id="footnote-1">
+            1. I could not. Unfortunately, a bit too complex for me right now. Keeping track of localStorage between
+            different categories, toggling between views... seems like a much easier task with React and not vanilla
+            HTML & CSS. Maybe next time!<a class="inline" href="#footnote1">
+                ↩&#xFE0E;</a>
+        </p>
+
+        <p id="footnote-2">
+            2. I looked into the process of converting web pages into Electron apps and stumbled upon many articles and
+            guides online, but was ultimately unsuccessful. Maybe it's a good thing because Electron apps are infamously
+            bloated. Still, it would have been cool to see this small project turn into its own native desktop app with
+            a nice accompanying icon. <a class="inline" href="#footnote2">
+                ↩&#xFE0E;</a>
+        </p>
+
+        <p style="margin-top: 2em"></p>
+        <a class="main" href="../notes.html">❉&#xFE0E; return to notes</a>
+        <a class="main" href="../../index.html">⁖ return to main</a>
+    </div>
+    <script src="../../js/readTimeEstimate.js"></script>
+</body>
+
+</html>
