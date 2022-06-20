@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="centered" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>neural networks</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="copy" id="article">
+    <div class="container">
+        <div class="header">
+            neural networks?
+            <!-- <button class="theme" style="float: right" id="theme-toggle" onclick="modeSwitcher()"></a> -->
+            <br>
+            <span class="readtime" id="time"></span>
+            <span class="readtime">&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;25/04/22</span>
+        </div>
+
+        <p>
+            been trying to learn more about neural nets in the past two days. a lot of the math flew over my head
+            (linear algebra? multivariable calculus? classes I have yet to take).
+            <br><br>
+            but i'll just jot down some notes and things that i've taken away, i.e. what little my non-porous nut of a
+            brain has absorbed (i'm going to say 'i think' a lot here, i think):
+            <br><br>
+            neural networks are modelled after real processes that happen in our brain (cog sci).
+            a nn is comprised of at least 2 layers, the input layer and output layer, and in between there could be any
+            number of "hidden layers". the layers themselves comprise of "neurons".
+            <br><br>
+
+            it is often said that the more hidden layers there are, the better. same goes for neurons in those layers.
+            so what is optimal? i'm guessing it has to do with time/space complexities as usual. we could have a billion
+            hidden layers to really fine-tune the nn, but at the cost of tremendous time/space overhead. but this is
+            just my hypothesis. and perhaps that's why optimising the right number of layers/neurons is also a task in itself.
+
+            <br><br>
+            for the next few steps, there is math involved. lots.
+
+            <br><br>
+            the inputs are multiplied by specific weights, and summed together. then, a bias is added, and the entire
+            thing is passed through an activation function, of which there are multiple (sigmoid, tanh, relu).
+
+            <br><br>
+            these weights are used to determine the "importance" or "impact" of the individual neurons. the bias is
+            apparently used to shift the resulting sum into a "normalised" range of sorts. the activation function is to
+            give the nn more complexity, without it, it would simply be a linear regression of sorts. these parts i'm
+            most shaky about. i'm jumping ahead of myself, but are these just terms/mathematical properties sprinkled
+            into the nn that give it the ability to be flexible/trained/modified? i'm curious to find out how these were
+            materialised in the first place.
+
+            <br><br>
+            anyway, this sum is then passed into *one* neuron of the next layer (hidden or output). to backtrack, i'm
+            not sure if the weights differ from one neuron to the next. there's a lot to keep track here.
+
+            <br><br>
+            the input data is passed through all the layers, and this process is known as forward propagation. it's used
+            when training the nn and of course when we actually pass in unseen data that we want the nn to process
+            (usually classification, see XOR or mnist, the 'hello worlds' of NNs).
+
+            <br><br>
+            how does the machine "learn"? how does the NN get better? backpropagation. this is where the nn fine tunes
+            its weights such that subsequent outputs are closer
+            to the target/actual outputs (this is why training data is important, with correctly labelled test data).
+
+            <br><br>
+            the difference between training output and target output is known as the cost error, i think. usually
+            derived using the MSE, something like 1/n*Σ(output-target)^2 (where n is the no. of output nodes?). then to fine-tune the
+            weights, here comes multivariable calculus and gradient descents, realms which i have no hope of surviving
+            in atm, but still useful to note down for future reference.
+
+            <br><br>
+            the trouble is, i have such a difficulty not only learning how they actually train the nn, but also the math
+            itself, so here are some notes on that in the form of chicken scratch and babble:
+        <ul>
+            <li>
+                finding the local min(s), should be all of equal quality, to reduce the error
+            </li>
+            <li>
+                i think there is chain rule involved since the weights, biases and inputs are multiplied, summed, etc to
+                form the final output
+            </li>
+            <li>
+                uh that is it, slim pickings, sorry
+            </li>
+        </ul>
+        </p>
+
+        <p>
+            rinse and repeat and you have a nice neat NN. I think.
+
+            <br><br>
+            i tried learning to program one in C++ from scratch. i can understand the programming, and the
+            implementation, but my understanding of what and how the nn does it is too shallow for me to shamelessly own
+            that piece of knowledge. i'll try again... someday...
+
+            <br><br>
+            final notes:
+        </p>
+        <p>
+        <ul>
+            <li>
+                a NN is actually kind of dumb. its worldview is more or less constructed from what training data you
+                pass
+                in. it has no hope of recognising them even. all of the information is compressed into essentially 1s
+                and
+                0s. it's more of a very sophisticated pattern recognition system.
+            </li>
+            <li>
+                but a NN could also be kind of invincible? given a limitless number of hidden layers and neurons, could
+                it
+                theoretically be able to classify anything? beyond objects funnelled into well-defined categories like
+                "furniture" or "numbers", a general, universal NN...
+            </li>
+            <li>
+                i was playing around with OpenAI's API the other day (i made a small app with it too, but nothing to
+                write
+                home about, just me fiddling around with more API calls and web development more than actually learning
+                how
+                the magic happens), and i was wondering how crazy it would be if, alongside OCR, these three things were
+                synthesised, but, and forgive this stupid question, OpenAI's API is built on NN, right? I should
+                probably
+                just google that
+            </li>
+            <li>
+                for any sentences above that end in a '?' and are not questions themselves, either take them with a heaping mound of salt or consider them completely wrong (you'd probably do well to agree with the latter :0) )
+            </li>
+        </ul>
+        </p>
+
+        <p style="margin-top: 2em"></p>
+        <a class="main" href="../notes.html">❉&#xFE0E; return to notes</a>
+        <a class="main" href="../../index.html">⁖ return to main</a>
+    </div>
+    <script src="../../js/readTimeEstimate.js"></script>
+</body>
+
+</html>
