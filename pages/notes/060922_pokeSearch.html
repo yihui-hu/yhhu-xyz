@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="centered" lang="en" style="max-width: 100ch;" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>building pokéSearch</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="copy" id="article">
+    <div class="container">
+        <div class="header">
+            a long overdue post on building pokéSearch
+            <!-- <button class="theme" style="float: right" id="theme-toggle" onclick="modeSwitcher()"></a> -->
+            <br>
+            <span class="readtime" id="time"></span>
+            <span class="readtime">&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;20/09/22</span>
+        </div>
+
+        <p>
+            (Written on 4 Sept, edited / published on 20 Sept)
+            <br><br>
+
+            Currently about 2/3 done with my 15-hr long flight. Still have one layover and another 6 hours after that. My butt is hurting so bad and I'm bored out of my mind
+            so I thought I would take the time to document a project that I embarked on during the first half of
+            June.
+            <br><br>
+
+            Per the closing remarks of <a href="150622_todotoday.html">this post</a>, I was itching to learn React to create a SPA (single page
+            app). At the same time
+            I wanted to learn how to do API calls and work with real, dynamic data rather than static,
+            manually-inputted data. I had also been playing Pokémon Legends: Arceus a lot then (one of their better
+            releases of late, especially after the lukewarm release of SwSh, but I digress). I found myself once again
+            engrossed in the background and characteristics of individual pokemon. So I knew that I wanted my React
+            project to somehow tie in with my rekindled affection for Pokémon. At the same time I was searching online
+            for API projects for beginners and stumbled upon PokéAPI, which happens to be quite a popular choice for
+            newbies, a "baby's first API call" if you will. So I decided, why not use it to create a pseudo-Pokédex of
+            sorts?
+        </p>
+
+        <p>
+            <img src="../../images/pokesearch_legendsarceus.png"/>
+            <figcaption>A couple of Bidoofs enjoying themselves in Pokémon Legends: Arceus</figcaption>
+            <br>
+        </p>
+
+        <p>
+            Since this was going to be my first React project, my focus was on simplicity; I wanted to capture just the
+            key aspects of the Pokémon itself (such as its typing(s), stats and abilities, but I eventually went on to
+            include more info, like its evolution line, Pokédex entry, other intersting trivia etc. once I got more
+            comfortable with React, but more on that later). While doing so, I wanted to design a clean user interface
+            while eliminating most of the cruft that comes with popular encyclopaedias like Bulbapedia<sup
+                id="footnote1"><a class="footnote" href="#footnote-1">1</a></sup> and Serebii. Essentially a very
+            simple, pared back Pokédex.
+            <br><br>
+
+            I really should have documented more (or at all) during the process of building the app because I am
+            struggling to recall the exact steps I took. But I will try my best.
+            <br><br>
+
+            I'm also jumping ahead here, but (thank you past self) I archived earlier iterations of the site on Netlify; if you're interested
+            in viewing them, you can do so here:
+        <ol type="1">
+            <li><a href="https://pokesearch-simple-v1.netlify.app/"
+                    target="_blank">https://pokesearch-simple-v1.netlify.app/</a> (super barebones, just testing the api
+                call for grovyle)</li>
+            <li><a href="https://pokesearch-simple-v2.netlify.app/"
+                    target="_blank">https://pokesearch-simple-v2.netlify.app/</a> (added ability descriptions &
+                evolution line)</li>
+            <li><a href="https://pokesearch-simple-v3.netlify.app/"
+                    target="_blank">https://pokesearch-simple-v3.netlify.app/</a> (added ability to go to next and
+                previous pokemon in the dex
+                with buttons in the nav bar)</li>
+            <li><a href="https://pokesearch-simple-v4.netlify.app/"
+                    target="_blank">https://pokesearch-simple-v4.netlify.app/</a> (added moves learned and fun facts)
+            </li>
+            <li><a href="https://pokesearch-simple-v5.netlify.app/"
+                    target="_blank">https://pokesearch-simple-v5.netlify.app/</a> (added information modal)</li>
+            <li><a href="https://pokesearch-simple-v6.netlify.app/"
+                    target="_blank">https://pokesearch-simple-v6.netlify.app/</a> (changed fonts and fixed edge cases...
+                try searching for ho-oh
+                in v5 vs. v6)</li>
+        </ol>
+
+        </p>
+
+        <p>
+            I used the React tutorial from Scrimba for most of the process, which came in really handy especially with
+            hooks like useState and useEffect. Still not really good at those, but definitely a lot more familiar than
+            before.
+            <br><br>
+
+            Anyway. I had decided on these features to be implemented in the project:
+
+        <ol type="1">
+            <li>Stats</li>
+            <li>Typing</li>
+            <li>Abilities</li>
+            <li>Evolutionary line</li>
+            <li>Pokédex entry</li>
+            <li>Moveset</li>
+            <li>Fun facts</li>
+            <li>Competitive usage</li>
+        </ol>
+
+        </p>
+
+        <p>
+            For the most part, it was easy enough using 'axios get' to pull in the stats, typing, abilities etc. of each
+            Pokémon from PokéAPI. I just had to think about how to present them in a neat manner. And to make it all work
+            in a relatively seamless manner (switching between views, making sure data is passed and updated correctly with
+            changes, etc.). I describe a few of the hurdles I ran into below.
+        </p>
+
+        <p>
+            <img src="../../images/pokesearch_evolutions.png" />
+            <br><br>
+            
+            Displaying evolutionary lines was particularly challenging: 
+            
+        <ol type="1">
+            <li>
+                Some Pokémon had only one evolution.
+            </li>
+            <li>
+                Some had two evolutions.
+            </li>
+            <li>
+                Others had split evolutions (e.g. Slowpoke evolving into either Slowking or Slowbro), and even multiple evolutions (e.g. Eevee into Vaporean, Espeon, Flareon, Leafeon etc.).
+            </li>
+            <li>
+                The way that PokéAPI stores these
+                evolutions in their database was also quite confusing/convoluted. It would be difficult to implement a
+                modular view of evolutions with this in mind. 
+            </li>
+            <li>
+                The only solution I saw at the time was to create custom views for
+                such edge cases. But there are too many of such edge cases, which is why I went with the simpler approach of
+                displaying at most 3 stages. For that reason, Eevee only appears to evolve into Vaporeon with this
+                implementation. Unfortunate, but I wanted to prioritise my time on other features.
+            </li>
+        </ol>
+        </p>
+
+        <p>    
+            Searching for Pokémon by name was also quite the struggle for a few reasons:
+        <ol type="1">
+            <li>No “smart search” or “auto completion” was implemented. The name had to be written perfectly. I looked
+                into how to improve this, but decided to keep it simple for now. </li>
+            <li>Some Pokémon have different forms, and the way that PokéAPI stores these different forms makes it
+                slightly more challenging to find them. For example, searching “Giratina” would result in an error stating that the Pokémon could not be found because the API records Giratina differently. There isn't one "Giratina" entry but two: “Giratina-altered” and “Giratina-origin”, recorded as separate entities, but I doubt most people would know to search for
+                those. In a perfect word, searching Giratina would simply show both forms on the same page complete with
+                their respective info. I managed to resolve this, somewhat hackily, by ignoring the form names after each hyphen “-“ and serving the first default form in the database, but then I remembered that Pokémon like Ho-oh, who has no alternate form, exists, so these were the edge cases that I had to work around.</li>
+            <li>To aid in the discovery of alternate forms for Pokémon, I chose to feature them in the “fun facts”
+                section if a Pokemon species had them, and encouraged users to search them up. Just a small alleviation
+                of what is otherwise a rather clunky implementation of searching.</li>
+        </ol>
+        </p>
+
+        <p>
+            These are at least the more interesting hurdles that I faced. The rest simply involved me getting comfortable with React and JSX syntax, executing the layout I had in mind, and making it all work. Again, I wish I'd documented more... 
+        </p>
+
+        <p>
+            <img src="../../images/pokesearch_all_pokemon.png"/>
+            <br><br>
+
+            This is probably my favourite section of the project, which is basically a list view of all 898 pokemon
+            released thus far. By default, it also presents the Pokémon's Pokédex number, name, sprite and typing(s),
+            but there is a toggle to hide all text/misc. info. So what you get is a long, scrollable list of colourful
+            Pokemon sprites. The viewport dynamically resizes according to screen size so it remains a beautiful
+            encyclopedia of both
+            official and unofficial (gen 6 onwards) sprites no matter the device. It's not perfect, however; the initial
+            plan was to have pagination for this section, to reduce loading times and eliminate long scrolling, but
+            keeping track of it in tandem with the “main” Pokémon view was a lot more than what I could handle at the
+            time.
+            <br><br>
+
+            If you refer back to the list above, all but one of the features were successfully implemented; the last one
+            I wanted to incorporate was a small section outlining the Pokémon's usage and viability in competitive
+            play (from the likes of VGC and Smogon), but I could not access the endpoints of what few relevant APIs were
+            publicly available due to a CORS error. After hours of debugging I still wasn't able to resolve this
+            unfortunately, but I plan to continue looking into this in the future.
+            <br><br>
+
+            Still, overall, I'm pretty happy with how this project turned out, so much so that I decided to get a custom
+            domain for it. It's now live on <a href="https://pokesearch.xyz" target="_blank">pokesearch.xyz</a>.
+            <br><br>
+
+            <img src="../../images/pokesearch_final.png"/>
+            <br><br>
+
+            This project definitely went a lot further than how I first imagined it—I was constantly excited, envisioning and implementing
+            new features, pushing my ideas as far as I could with respect to how much I learnt up to that point. It
+            could use a lot more polish, but I had fun experimenting with React and building interfaces with CSS. It’s
+            nice to just put something out there, especially something that I would personally use myself for quick lookups of Pokémon stats/abilities or to read the nifty Pokédex entries. I surprised myself with just how far interest can go; if you're really interested, curious or passionate about something, there's this real inclination to dig deep and go for it.
+            <br><br>
+
+            After this project, I went on to build my <a href="https://yhhu.design" target="_blank">personal portfolio</a>, switching from Netlify to Next.js in the
+            process, and worked with libraries like Framer motion to create more dynamic pages (re: my previous
+            post) but of course that’s for another time. Maybe I'll write about it when I fly back from the US in a few
+            months time. Because it seems like the only times I feel like documenting these things for an online blog
+            post that virtually nobody reads is when I have absolutely nothing else to do. A bad habit for sure. We’ll
+            see.
+
+            <hr style="margin-top: 2em;margin-bottom: 1em;">
+
+        </p>
+
+        <p>
+            Other rough notes on PokéAPI:
+        <ul>
+            <li>the data is not completely up to date, with some missing pokedex entries or move descriptions. i recall
+                the last somewhat minor update to the API being in april.</li>
+            <li>the data is also sometimes oddly organised (simplified example: each pokemon is an object that contains
+                an
+                array of ability descriptions in different languages; i couldn't consistently pull the first, second or
+                third item from the array to get the ability description in english because they were seemingly randomly
+                ordered; somewhat thankfully each ability description was an object itself that contained a string
+                that
+                determined its language, like EN for english and ES for spanish, so i just had to traverse the entire
+                array
+                until i found the english ability description. i imagine that this would be much easier with graphql or
+                something</li>
+            <li>speaking of which, there is a graphql version of the api available, which is only in beta, but it should
+                make querying for Pokémon a lot easier / streamlined and maybe even faster. GraphQL is definitely on my
+                list
+                of important things to learn.</li>
+        </ul>
+        </p>
+
+        <p>
+            But it's hard to imagine a more comprehensive dataset of Pokemon that is publicly available. And I really
+            appreciate that it exists! APIs are so cool.
+        </p>
+
+        <hr style="margin-top: 2em;margin-bottom: 1em;">
+
+        <p id="footnote-1">
+            1. Coincidentally, Bulbapedia was broken for a large part of the development period of this project, so there really wasn't a better time to
+            start the project.<a class="inline" href="#footnote1">
+                ↩&#xFE0E;</a>
+        </p>
+
+        <p style="margin-top: 2em"></p>
+        <a class="main" href="../notes.html">❉&#xFE0E; return to notes</a>
+        <a class="main" href="../../index.html">⁖ return to main</a>
+    </div>
+    <script src="../../js/readTimeEstimate.js"></script>
+</body>
+
+</html>
