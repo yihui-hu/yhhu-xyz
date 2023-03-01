@@ -196,6 +196,13 @@ a.main {
   margin-right: 1.5em;
 }
 
+a.inline {
+  /* general nav links */
+  color: var(--index-header-color);
+  font-family: "printveticaregular", Helvetica, Arial;
+  font-size: 1.05rem;
+}
+
 a.footnote {
   font-size: 1rem;
   margin-left: 2px;
